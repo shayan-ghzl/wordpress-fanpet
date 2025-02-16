@@ -1,0 +1,30 @@
+.hero {
+    .content {
+        position: absolute;
+        top: 50%;
+        right: 72px;
+        transform: translateY(-64%);
+        opacity: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 12px;
+    }
+    .swiper-slide-active {
+        .content {
+            animation: moveDown 1s ease-in forwards;
+        }
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-64%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-57%);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+@use "../wordpress-basics/environments" as env;
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 32px;
+
+    // heading
+    --heading-3-font-size: 15px;
+    --heading-3-margin: 0 0 8px 0;
+
+    // paragraph
+    --paragraph-font-size: 14px;
+    --paragraph-margin: 0;
+
+    .card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    path {
+        fill: env.$primary-color;
+    }
+}

@@ -1,7 +1,7 @@
 @use "mixin";
 
-$primary-color: #dc3545 !default;
-$accent-color: #202020 !default;
+$primary-color: #613abc !default;
+$accent-color: #FFA200 !default;
 
 $primary-rgb-color: mixin.to-rgb($primary-color) !default;
 $accent-rgb-color: mixin.to-rgb($accent-color) !default;

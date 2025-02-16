@@ -13,7 +13,7 @@
                         ?>
                     </div>
                 </footer>
-            </div>
+            </main>
         </div>
         <?php wp_footer() ?>
     </body>

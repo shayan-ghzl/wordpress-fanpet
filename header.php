@@ -14,23 +14,23 @@
 
 <body <?php body_class() ?>>
     <div id="page">
-        <div id="site-content">
+        <main id="site-content">
 
             <header class="site-header">
-                <div class="inner-content">
+                <div class="toolbar">
                     <?php
                     the_custom_logo();
-
-                    if (has_nav_menu('header-menu')) {
-                        wp_nav_menu(array(
-                            'theme_location' => 'header-menu',
-                            'container'      => 'nav',
-                            'fallback_cb'    => false
-                        ));
-                    }
-
                     get_template_part('template-parts/site-popups');
                     ?>
                 </div>
+
+                <?php
+                if (has_nav_menu('header-menu')) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'header-menu',
+                        'container'      => 'nav',
+                        'fallback_cb'    => false
+                    ));
+                }
+                ?>
             </header>
-            

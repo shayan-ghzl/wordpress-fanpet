@@ -1,7 +1,7 @@
 @use "environments" as env;
 
 footer.site-footer {
-    background-color: env.$accent-color;
+    background-color: env.$primary-color;
     
     .inner-content {
         margin: 0 auto;

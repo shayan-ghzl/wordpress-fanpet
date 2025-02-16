@@ -1,6 +1,6 @@
 "use strict";
 class LayoutPopup {
-    constructor() {
+    constructor () {
         this.popupBtnNodes = document.querySelectorAll(".drop-menu-container .dm-toggler");
         this.dropMenuContainer = document.querySelectorAll(".drop-menu-container");
         this.events();
@@ -51,7 +51,7 @@ class LayoutPopup {
     }
 }
 class PassVisibility {
-    constructor(element) {
+    constructor (element) {
         this.passVisibilityBtn = element;
         this.hideIcon = element.children[0];
         this.showIcon = element.children[1];
@@ -78,4 +78,12 @@ class PassVisibility {
 document.addEventListener('DOMContentLoaded', () => {
     PassVisibility.init_pass_visibility();
     new LayoutPopup();
+
+    if (document.body.classList.contains('home')) {
+        new Swiper('.swiper', {
+            slidesPerView: 1,
+            loop: true,
+            effect: 'fade',
+        });
+    }
 });

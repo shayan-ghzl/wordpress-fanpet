@@ -101,7 +101,11 @@ p {
 }
 
 a {
+    display: var(--link-display, inline);
+    font-weight: var(--link-font-weight, inherit);
+    line-height: var(--link-line-height, inherit);
     color: var(--link-color, #{var.$link-color});
+    padding: var(--link-padding, 0);
     text-decoration: none;
 }
 
