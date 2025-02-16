@@ -1,0 +1,21 @@
+.pagination-container, .comments-pagination {
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 42px;
+    }
+
+    .page-numbers {
+        display: block;
+        padding: 6px 16px;
+        border: 1px solid;
+
+        &:not(.current) {
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use "environments" as env;
+
+$text-color: #000 !default;
+$text-align: right !default;
+// ----------------body----------------
+$body-font-family: "Vazir", Vazir !default;
+$body-font-size: 16px !default;
+$body-font-weight: 400 !default;
+$body-line-height: 1.5 !default;
+$body-text-align: $text-align !default;
+$body-direction: rtl !default;
+$body-color: $text-color !default;
+$body-background-color: #fff !default;
+// ----------------heading----------------
+$heading-font-family: "Vazir", Vazir !default;
+$heading-font-weight: 700 !default;
+$heading-line-height: 1.5 !default;
+$heading-text-align: $text-align !default;
+$heading-color: $text-color !default;
+$heading-margin: 0 0 16px 0 !default;
+
+$heading-1-font-size: 24px !default;
+$heading-2-font-size: 20px !default;
+$heading-3-font-size: 18px !default;
+$heading-4-font-size: 16px !default;
+$heading-5-font-size: 14px !default;
+$heading-6-font-size: 12px !default;
+// ----------------paragraph----------------
+$paragraph-font-family: "Vazir", Vazir !default;
+$paragraph-font-size: 16px !default;
+$paragraph-font-weight: 400 !default;
+$paragraph-line-height: 1.5 !default;
+$paragraph-text-align: $text-align !default;
+$paragraph-color: $text-color !default;
+$paragraph-margin: 0 0 16px 0 !default;
+// ----------------anchor----------------
+$link-color: env.$primary-color !default;
+$link-hover-color: env.$primary-color !default;
+// ----------------input----------------
+$input-autofill-color: #484848;
+$input-disabled-autofill-color: #c9c9c9;
+// ----------------button----------------
+$button-display: inline-block !default;
+$button-font-family: "Vazir", Vazir !default;
+$button-font-size: 14px !default;
+$button-font-weight: 500 !default;
+$button-line-height: 1 !default;
+$button-text-align: center !default;
+$button-color: #fff !default;
+$button-background-color: #000 !default;
+$button-border-width: 0 !default;
+$button-border-color: transparent !default;
+$button-border-radius: 8px !default;
+$button-padding: 10px 16px !default;
+$button-margin: 0 !default;
+// focus
+$button-focus-box-shadow-rgb: 0, 0, 0 !default;
+// hover
+$button-hover-color: #fff !default;
+$button-hover-background-color: #000 !default;
+$button-hover-border-color: transparent !default;
+// active
+$button-active-color: #fff !default;
+$button-active-background-color: #000 !default;
+$button-active-border-color: transparent !default;
+// ----------------input----------------
+$input-display: block !default;
+$input-font-family: "Vazir", Vazir !default;
+$input-font-size: 16px !default;
+$input-font-weight: 400 !default;
+$input-line-height: 1.5 !default;
+$input-text-align: rtl !default;
+$input-color: #000 !default;
+$input-background-color: #fff !default;
+$input-border-width: 1px !default;
+$input-border-color: #00000080 !default;
+$input-border-radius: 6px !default;
+$input-width: 100% !default;
+$input-padding: 8px !default;
+$input-margin: 0 !default;
+$input-autofill-color: #000 !default;
+$input-disabled-autofill-color: #00000080 !default;
+// focus
+$input-focus-color: #000 !default;
+$input-focus-border-color: #000 !default;
+$input-focus-box-shadow-rgb: 0, 0, 0 !default;

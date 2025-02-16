@@ -1,0 +1,24 @@
+// ----------------abstract----------------
+.drop-menu-container {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 10;
+
+    &.dm-show {
+        .dm-popup {
+            display: block;
+        }
+    }
+
+    .dm-popup {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: var(--dm-popup-background, #fff);
+        border: 1px solid var(--dm-popup-border-color, #000);
+        border-radius: var(--dm-popup-border-radius, 8px);
+        box-shadow: 0 3px 10px -3px #00000075;
+        overflow: hidden;
+    }
+}

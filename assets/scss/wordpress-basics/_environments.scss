@@ -1,0 +1,14 @@
+@use "mixin";
+
+$primary-color: #dc3545 !default;
+$accent-color: #202020 !default;
+
+$primary-rgb-color: mixin.to-rgb($primary-color) !default;
+$accent-rgb-color: mixin.to-rgb($accent-color) !default;
+
+$secondary-color: #212529bf !default;
+$danger-color: #dc3545 !default;
+
+$layout-max-width: 1340px !default;
+$tablet-width: 768px !default;
+$mobile-width: 576px !default;

@@ -1,0 +1,13 @@
+@use "environments" as env;
+
+header.site-header {
+    background-color: env.$accent-color;
+
+    .inner-content {
+        margin: 0 auto;
+    }
+    nav {
+        --list-font-size: 14px;
+        --link-color: #fff;
+    }
+}

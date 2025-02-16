@@ -1,0 +1,42 @@
+{
+  "name": "fanpet",
+  "version": "1.0.0",
+  "description": "html, css, scss, js, ts",
+  "main": "gulpfile.js",
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "js",
+    "ts"
+  ],
+  "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 10 versions",
+    "firefox >= 4",
+    "safari 7",
+    "safari 8",
+    "IE 8",
+    "IE 9",
+    "IE 10",
+    "IE 11"
+  ],
+  "devDependencies": {
+    "@types/jquery": "^3.5.32",
+    "@types/jquery.blockui": "^0.0.33",
+    "@types/jqueryui": "^1.12.23",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^8.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "sass": "^1.83.1",
+    "typescript": "^5.7.2"
+  }
+}

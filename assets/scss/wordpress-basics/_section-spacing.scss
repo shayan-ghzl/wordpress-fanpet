@@ -1,0 +1,56 @@
+@use "environments" as env;
+@use "breakpoints" as brk;
+
+header.site-header {
+    margin-bottom: 42px;
+}
+.post-archive {
+    width: env.$layout-max-width;
+    margin: 0 auto 42px auto;
+}
+.latest-posts {
+    width: env.$layout-max-width;
+    margin: 0 auto 42px auto;
+}
+section.single-post {
+    width: env.$layout-max-width;
+    margin: 0 auto 42px auto;
+}
+.related-posts {
+    width: env.$layout-max-width;
+    margin: 0 auto 42px auto;
+}
+#comments {
+    margin: 0 auto 42px auto;
+}
+.post-cards-grid-container,
+#comments,
+header.site-header .inner-content,
+footer.site-footer .inner-content {
+    width: env.$layout-max-width;
+}
+
+@include brk.layout {
+    .post-archive,
+    .latest-posts,
+    section.single-post,
+    #comments,
+    .related-posts {
+        width: 100%;
+        padding: 0 24px;
+    }
+    .post-cards-grid-container,
+    header.site-header .inner-content,
+    footer.site-footer .inner-content {
+        width: 100%;
+    }
+}
+@include brk.mobile {
+    .post-archive,
+    .latest-posts,
+    section.single-post,
+    #comments,
+    .related-posts {
+        padding: 0 16px;
+    }
+}

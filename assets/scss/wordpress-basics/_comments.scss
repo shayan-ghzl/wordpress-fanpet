@@ -1,0 +1,53 @@
+@use "environments" as env;
+
+#comments {
+    --paragraph-font-size: 14px;
+    --list-font-size: 14px;
+
+    article {
+        background-color: rgba(env.$primary-rgb-color, 0.05);
+        border-width: 1px 3px 1px 1px;
+        border-style: solid;
+        border-color: env.$primary-color;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        padding: 10px;
+    }
+    .comment-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid env.$primary-color;
+
+        .avatar {
+            display: block;
+            border-radius: 50%;
+        }
+        .edit-link {
+            display: inline-block;
+            border: 1px solid #dc3545;
+            padding: 0 12px;
+            margin-right: 6px;
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+    .comment-content {
+        margin-top: 10px;
+    }
+    .comment-reply-link {
+        display: inline-block;
+        border: 1px solid #dc3545;
+        padding: 0 12px;
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    .children {
+        margin-right: 12px;
+    }
+}

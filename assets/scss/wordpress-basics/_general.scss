@@ -1,0 +1,10 @@
+@use "environments" as env;
+
+.custom-logo-link {
+    img {
+        display: block;
+    }
+}
+.required {
+    color: env.$danger-color;
+}
