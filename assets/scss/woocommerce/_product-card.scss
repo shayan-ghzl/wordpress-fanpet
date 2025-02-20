@@ -1,0 +1,26 @@
+$border-color: #00000040 !default;
+$border-radius: 10px !default;
+
+li.product {
+    position: relative;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: 8px;
+
+    --link-display: block;
+
+    --button-display: block;
+    --button-margin: 24px 0 0 0;
+
+    .onsale {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .attachment-woocommerce_thumbnail {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+    }
+}

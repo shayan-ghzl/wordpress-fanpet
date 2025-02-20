@@ -80,10 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new LayoutPopup();
 
     if (document.body.classList.contains('home')) {
-        new Swiper('.swiper', {
+        new Swiper('.hero .swiper', {
             slidesPerView: 1,
             loop: true,
             effect: 'fade',
+        });
+        new Swiper('.trending-products .swiper', {
+            slidesPerView: 6,
+            spaceBetween: 16
         });
     }
 });

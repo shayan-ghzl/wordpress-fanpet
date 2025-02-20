@@ -19,6 +19,8 @@ function register_menus()
         'header-menu' => __('Header menu', 'fanpet'),
         'footer-menu' => __('Footer menu', 'fanpet'),
         'login-menu' => __('Login menu', 'fanpet'),
+        'trending-products-top-menu' => __('Trending Products Top menu', 'fanpet'),
+        'trending-products-bottom-menu' => __('Trending Products Bottom menu', 'fanpet'),
     ));
 }
 add_action('after_setup_theme', 'register_menus');

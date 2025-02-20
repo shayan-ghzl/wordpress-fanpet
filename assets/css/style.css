@@ -516,6 +516,11 @@ section.features {
   margin: 42px auto;
 }
 
+section.trending-products {
+  width: 1340px;
+  margin: 42px auto;
+}
+
 header.site-header {
   margin-bottom: 24px;
 }
@@ -583,6 +588,27 @@ footer.site-footer .inner-content {
 
 .required {
   color: #dc3545;
+}
+
+li.product {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
+  padding: 8px;
+  --link-display: block;
+  --button-display: block;
+  --button-margin: 24px 0 0 0;
+}
+li.product .onsale {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+li.product .attachment-woocommerce_thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .hero .content {

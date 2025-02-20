@@ -26,6 +26,8 @@ function enqueue_script()
     if (is_front_page()) {
         wp_enqueue_script('fanpet-swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     }
+    
+    // wp_enqueue_script( 'wc-cart-fragments' );
 }
 add_action('wp_enqueue_scripts', 'enqueue_script');
 
