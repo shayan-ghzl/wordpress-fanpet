@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             effect: 'fade',
         });
         new Swiper('.trending-products .swiper', {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 16
         });
     }

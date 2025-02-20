@@ -1,10 +1,5 @@
-@use "mixin";
-
 $primary-color: #613abc !default;
 $accent-color: #FFA200 !default;
-
-$primary-rgb-color: mixin.to-rgb($primary-color) !default;
-$accent-rgb-color: mixin.to-rgb($accent-color) !default;
 
 $secondary-color: #212529bf !default;
 $danger-color: #dc3545 !default;

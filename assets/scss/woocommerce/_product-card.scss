@@ -1,11 +1,17 @@
+@use 'sass:color';
+@use "../wordpress-basics/environments" as env;
+@use "../wordpress-basics/mixin";
+
 $border-color: #00000040 !default;
 $border-radius: 10px !default;
+
+$padding: 8px !default;
 
 li.product {
     position: relative;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    padding: 8px;
+    padding: $padding;
 
     --link-display: block;
 
@@ -22,5 +28,17 @@ li.product {
         width: 100%;
         height: auto;
         border-radius: $border-radius;
+    }
+    .added_to_cart {
+        position: absolute;
+        bottom: $padding;
+        left: $padding;
+        right: $padding;
+        z-index: 1;
+
+        --button-background-color: #{env.$accent-color};
+        --button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color);
+        --button-hover-background-color: color.adjust(env.$accent-color, $lightness: 10%);
+        --button-active-background-color: color.adjust(env.$accent-color, $lightness: 10%);
     }
 }

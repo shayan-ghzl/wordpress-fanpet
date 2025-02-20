@@ -217,7 +217,7 @@ input:not([type=submit]):not([type=checkbox]):-webkit-autofill:disabled, textare
   opacity: 0.65;
 }
 
-button, .button, input[type=submit] {
+button, .button, input[type=submit], a.added_to_cart {
   display: var(--button-display, inline-block);
   font-family: var(--button-font-family, Vazir, Vazir);
   font-size: var(--button-font-size, 14px);
@@ -237,20 +237,20 @@ button, .button, input[type=submit] {
   box-shadow: var(--button-box-shadow, none);
   user-select: none;
 }
-button:focus, .button:focus, input[type=submit]:focus {
+button:focus, .button:focus, input[type=submit]:focus, a.added_to_cart:focus {
   --button-box-shadow: 0 0 0 4px rgba(var(--button-focus-box-shadow-rgb, 97, 58, 188), 0.25);
 }
-button:hover, .button:hover, input[type=submit]:hover {
+button:hover, .button:hover, input[type=submit]:hover, a.added_to_cart:hover {
   --button-color: var(--button-hover-color, #fff);
-  --button-background-color: var(--button-hover-background-color, rgb(76.8902439024, 45.9756097561, 149.0243902439));
+  --button-background-color: var(--button-hover-background-color, rgb(125.987804878, 92.2195121951, 204.7804878049));
   --button-border-color: var(--button-hover-border-color, transparent);
 }
-button:active, .button:active, input[type=submit]:active {
+button:active, .button:active, input[type=submit]:active, a.added_to_cart:active {
   --button-color: var(--button-active-color, #fff);
-  --button-background-color: var(--button-active-background-color, rgb(76.8902439024, 45.9756097561, 149.0243902439));
+  --button-background-color: var(--button-active-background-color, rgb(125.987804878, 92.2195121951, 204.7804878049));
   --button-border-color: var(--button-active-border-color, transparent);
 }
-button:disabled, .button:disabled, input[type=submit]:disabled {
+button:disabled, button.loading, .button:disabled, .button.loading, input[type=submit]:disabled, input[type=submit].loading, a.added_to_cart:disabled, a.added_to_cart.loading {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -339,7 +339,7 @@ footer.site-footer nav {
   --list-font-size: 14px;
 }
 #comments article {
-  background-color: rgba(97, 58, 188, 0.05);
+  background-color: rgb(0.05, 97, 58);
   border-width: 1px 3px 1px 1px;
   border-style: solid;
   border-color: #613abc;
@@ -516,6 +516,11 @@ section.features {
   margin: 42px auto;
 }
 
+section.product-categories {
+  width: 1340px;
+  margin: 42px auto;
+}
+
 section.trending-products {
   width: 1340px;
   margin: 42px auto;
@@ -610,6 +615,17 @@ li.product .attachment-woocommerce_thumbnail {
   height: auto;
   border-radius: 10px;
 }
+li.product .added_to_cart {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  z-index: 1;
+  --button-background-color: #FFA200;
+  --button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color);
+  --button-hover-background-color: color.adjust(env.$accent-color, $lightness: 10%);
+  --button-active-background-color: color.adjust(env.$accent-color, $lightness: 10%);
+}
 
 .hero .content {
   position: absolute;
@@ -653,4 +669,16 @@ li.product .attachment-woocommerce_thumbnail {
 }
 .features path {
   fill: #613abc;
+}
+
+.product-categories .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+  gap: 32px;
+  --heading-3-text-align: center;
+  --heading-3-margin: 0;
+}
+.product-categories img {
+  width: 100%;
+  border-radius: 10px;
 }

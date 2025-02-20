@@ -1,11 +1,12 @@
 @use "environments" as env;
+@use "mixin";
 
 #comments {
     --paragraph-font-size: 14px;
     --list-font-size: 14px;
 
     article {
-        background-color: rgba(env.$primary-rgb-color, 0.05);
+        background-color: rgba(mixin.to-rgb(env.$primary-color)..., 0.05);
         border-width: 1px 3px 1px 1px;
         border-style: solid;
         border-color: env.$primary-color;
