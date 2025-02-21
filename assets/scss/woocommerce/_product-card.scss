@@ -12,16 +12,17 @@ li.product {
     border: 1px solid $border-color;
     border-radius: $border-radius;
     padding: $padding;
-
     --link-display: block;
-
+    --link-hover-color: #{env.$primary-color};
     --button-display: block;
-    --button-margin: 24px 0 0 0;
+    --button-margin: 18px 0 0 0;
+    --heading-2-font-size: 16px;
+    --heading-2-margin: 10px 0;
 
     .onsale {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: $padding;
+        left: $padding;
     }
     .attachment-woocommerce_thumbnail {
         display: block;
@@ -29,13 +30,34 @@ li.product {
         height: auto;
         border-radius: $border-radius;
     }
+    .woocommerce-loop-product__title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 48px;
+    }
+    .price {
+        del {
+            display: block;
+            color: env.$danger-color;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        ins {
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
     .added_to_cart {
         position: absolute;
         bottom: $padding;
         left: $padding;
         right: $padding;
         z-index: 1;
-
         --button-background-color: #{env.$accent-color};
         --button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color);
         --button-hover-background-color: color.adjust(env.$accent-color, $lightness: 10%);

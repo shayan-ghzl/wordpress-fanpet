@@ -13,6 +13,10 @@ section.product-categories {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
+article.single-post.product {
+    width: env.$layout-max-width;
+    margin: 42px auto;
+}
 section.trending-products {
     width: env.$layout-max-width;
     margin: 42px auto;
@@ -52,6 +56,7 @@ footer.site-footer .inner-content {
     .latest-posts,
     section.single-post,
     #comments,
+    article.single-post.product,
     .related-posts {
         width: 100%;
         padding: 0 24px;
@@ -68,6 +73,7 @@ footer.site-footer .inner-content {
     .latest-posts,
     section.single-post,
     #comments,
+    article.single-post.product,
     .related-posts {
         padding: 0 16px;
     }

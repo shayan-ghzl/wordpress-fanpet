@@ -1,6 +1,7 @@
 <?php
 include_once('include/enqueue-scripts.php');
 include_once('include/add-action.php');
+include_once('include/add-filter.php');
 // -----------------------------------------------
 include_once('include/customizer-api.php');
 include_once('include/comments-helper.php');

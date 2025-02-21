@@ -81,7 +81,7 @@ $input-width: 100% !default;
 $input-padding: 8px !default;
 $input-margin: 0 !default;
 $input-autofill-color: #000 !default;
-$input-disabled-autofill-color: rgba(mixin.to-rgb(env.$primary-color)..., 0.5) !default;
+$input-disabled-autofill-color: rgba(mixin.to-rgb(env.$primary-color)..., 0.5)!default;
 // focus
 $input-focus-color: #000 !default;
 $input-focus-border-color: env.$primary-color !default;

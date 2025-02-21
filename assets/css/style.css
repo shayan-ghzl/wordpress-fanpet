@@ -521,6 +521,11 @@ section.product-categories {
   margin: 42px auto;
 }
 
+article.single-post.product {
+  width: 1340px;
+  margin: 42px auto;
+}
+
 section.trending-products {
   width: 1340px;
   margin: 42px auto;
@@ -567,6 +572,7 @@ footer.site-footer .inner-content {
   .latest-posts,
   section.single-post,
   #comments,
+  article.single-post.product,
   .related-posts {
     width: 100%;
     padding: 0 24px;
@@ -583,6 +589,7 @@ footer.site-footer .inner-content {
   .latest-posts,
   section.single-post,
   #comments,
+  article.single-post.product,
   .related-posts {
     padding: 0 16px;
   }
@@ -601,19 +608,42 @@ li.product {
   border-radius: 10px;
   padding: 8px;
   --link-display: block;
+  --link-hover-color: #613abc;
   --button-display: block;
-  --button-margin: 24px 0 0 0;
+  --button-margin: 18px 0 0 0;
+  --heading-2-font-size: 16px;
+  --heading-2-margin: 10px 0;
 }
 li.product .onsale {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 8px;
+  left: 8px;
 }
 li.product .attachment-woocommerce_thumbnail {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+li.product .woocommerce-loop-product__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 48px;
+}
+li.product .price del {
+  display: block;
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 500;
+}
+li.product .price ins {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
 }
 li.product .added_to_cart {
   position: absolute;
@@ -625,6 +655,12 @@ li.product .added_to_cart {
   --button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color);
   --button-hover-background-color: color.adjust(env.$accent-color, $lightness: 10%);
   --button-active-background-color: color.adjust(env.$accent-color, $lightness: 10%);
+}
+
+ul.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 16px;
 }
 
 .hero .content {

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @function to-rgb($value) {
-    @return red($value), green($value), blue($value);
+    @return (color.channel($value, "red"), color.channel($value, "green"), color.channel($value, "blue"));
 }
