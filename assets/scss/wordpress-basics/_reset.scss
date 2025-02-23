@@ -110,7 +110,7 @@ a {
 }
 
 a:hover {
-    --link-color: var(--link-hover-color, #{var.$link-hover-color});
+    color: var(--link-hover-color, #{var.$link-hover-color});
 }
 
 ul,
@@ -204,21 +204,37 @@ button, .button, input[type="submit"], a.added_to_cart {
     box-shadow: var(--button-box-shadow, none);
     user-select: none;
 
-    &:focus {
-        --button-box-shadow: 0 0 0 4px rgba(var(--button-focus-box-shadow-rgb, #{var.$button-focus-box-shadow-rgb}), 0.25);
+    &.link-button {
+        --button-color: inherit;
+        --button-background-color: transparent;
     }
-    &:hover {
-        --button-color: var(--button-hover-color, #{var.$button-hover-color});
-        --button-background-color: var(--button-hover-background-color, #{var.$button-hover-background-color});
-        --button-border-color: var(--button-hover-border-color, #{var.$button-hover-border-color});
+    &:not(.link-button) {
+        &:focus {
+            box-shadow: 0 0 0 4px rgba(var(--button-focus-box-shadow-rgb, #{var.$button-focus-box-shadow-rgb}), 0.25);
+        }
+        &:hover {
+            color: var(--button-hover-color, #{var.$button-hover-color});
+            background-color: var(--button-hover-background-color, #{var.$button-hover-background-color});
+            border-color: var(--button-hover-border-color, #{var.$button-hover-border-color});
+        }
+        &:active {
+            color: var(--button-active-color, #{var.$button-active-color});
+            background-color: var(--button-active-background-color, #{var.$button-active-background-color});
+            border-color: var(--button-active-border-color, #{var.$button-active-border-color});
+        }
     }
-    &:active {
-        --button-color: var(--button-active-color, #{var.$button-active-color});
-        --button-background-color: var(--button-active-background-color, #{var.$button-active-background-color});
-        --button-border-color: var(--button-active-border-color, #{var.$button-active-border-color});
-    }
+
     &:disabled, &.loading {
         pointer-events: none;
         opacity: 0.65;
+    }
+}
+
+[class^="uil-"], [class*=" uil-"] {
+    display: block;
+
+    &::before {
+        display: block;
+
     }
 }

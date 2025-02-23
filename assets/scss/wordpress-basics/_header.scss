@@ -20,7 +20,7 @@ header.site-header {
 
         // link
         --link-display: block;
-        --link-color: #fff;
+        --link-hover-color: #{env.$accent-color};
         --link-line-height: 1;
         --link-padding: 20px;
 

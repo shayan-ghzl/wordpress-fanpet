@@ -8,6 +8,6 @@ footer.site-footer {
     }
     nav {
         --list-font-size: 14px;
-        --link-color: #fff;
+        --link-hover-color: #{env.$accent-color};
     }
 }

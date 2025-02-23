@@ -13,6 +13,7 @@ li.product {
     border-radius: $border-radius;
     padding: $padding;
     --link-display: block;
+    --link-color: #{env.$primary-color};
     --link-hover-color: #{env.$primary-color};
     --button-display: block;
     --button-margin: 18px 0 0 0;
@@ -59,8 +60,8 @@ li.product {
         right: $padding;
         z-index: 1;
         --button-background-color: #{env.$accent-color};
-        --button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color);
-        --button-hover-background-color: color.adjust(env.$accent-color, $lightness: 10%);
-        --button-active-background-color: color.adjust(env.$accent-color, $lightness: 10%);
+        --button-focus-box-shadow-rgb: #{mixin.to-rgb(env.$accent-color)};
+        --button-hover-background-color: #{color.adjust(env.$accent-color, $lightness: 10%)};
+        --button-active-background-color: #{color.adjust(env.$accent-color, $lightness: 10%)};
     }
 }
