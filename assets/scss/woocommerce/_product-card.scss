@@ -20,10 +20,26 @@ li.product {
     --heading-2-font-size: 16px;
     --heading-2-margin: 10px 0;
 
+    .star-rating {
+        position: absolute;
+        bottom: 40px;
+        left: 14px;
+    }
     .onsale {
         position: absolute;
-        top: $padding;
-        left: $padding;
+        top: 0;
+        left: 0;
+        width: 52px;
+        height: 52px;
+        background-image: url('../images/sale.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffe500;
+        font-size: 14px;
+        font-weight: 500;
     }
     .attachment-woocommerce_thumbnail {
         display: block;

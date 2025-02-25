@@ -1,3 +1,19 @@
 @use "product-card";
 @use "products-grid-container";
 @use "site-popups";
+@use "woo-comments";
+
+.star-rating {
+    display: inline-block;
+    position: relative;
+
+    span {
+        direction: ltr;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+}

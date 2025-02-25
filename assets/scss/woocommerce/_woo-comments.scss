@@ -1,0 +1,48 @@
+@use "../wordpress-basics/environments" as env;
+
+.woocommerce-Reviews {
+    .commentlist {
+        .comment_container {
+            display: flex;
+            align-items: start;
+            gap: 16px;
+            background-color: rgba(env.$primary-color, 0.05);
+            border-width: 1px 3px 1px 1px;
+            border-style: solid;
+            border-color: env.$primary-color;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            padding: 10px;
+        }
+    }
+    .comment-reply-title {
+        display: block;
+        margin-bottom: 24px;
+        --body-font-weight: 500;
+    }
+    .stars {
+        direction: ltr;
+        --paragraph-margin: 4px 0 20px 0;
+
+        &.selected {
+            a {
+                background-image: url('../images/single-star.png');
+            }
+        }
+        a {
+            background-image: url('../images/single-star-empty.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 14px;
+            --link-display: inline-block;
+            --link-color: #00000000;
+            --link-hover-color: #00000000;
+            --link-padding: 3px 7px 0 7px;
+            --link-font-weight: 600;
+
+            &.active~a {
+                background-image: url('../images/single-star-empty.png') !important;
+            }
+        }
+    }
+}
