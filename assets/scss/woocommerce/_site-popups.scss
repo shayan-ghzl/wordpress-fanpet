@@ -103,6 +103,32 @@ $basket-item-border-bottom-color: #636363 !default;
             }
         }
     }
+    .user-popup {
+        --dm-popup-width: 220px;
+        --dm-popup-padding: 12px;
+        --dm-popup-background: #{$basket-background-color};
+        --dm-popup-border-color: trasparent;
+        --link-color: #fff;
+        --link-hover-color: #fff;
+        --link-display: block;
+        --icon-display: inline-block;
+        --icon-font-size: 18px;
+
+        .user-popup-inner {
+            display: flex;
+            align-items: start;
+            gap: 18px;
+            font-size: 14px;
+        }
+        .avatar {
+            img {
+                display: block;
+                border-radius: 50%;
+                padding: 4px;
+                border: 2px solid #fff;
+            }
+        }
+    }
 }
 @supports not selector(::-webkit-scrollbar) {
     .site-popups .basket-popup .woocommerce-mini-cart {

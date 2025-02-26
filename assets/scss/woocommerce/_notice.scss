@@ -1,0 +1,18 @@
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    outline: 0;
+    animation: fadeOut 1s ease-out 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

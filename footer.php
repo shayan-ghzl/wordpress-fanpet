@@ -11,6 +11,8 @@
                                 ));
                             }
                         ?>
+                        تلفن: +989353728642
+                        ایمیل: shayan97.tti@gmail.com
                     </div>
                 </footer>
             </main>

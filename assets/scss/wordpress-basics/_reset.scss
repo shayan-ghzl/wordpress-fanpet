@@ -1,4 +1,7 @@
 @use "reset-variables" as var;
+@use "environments" as env;
+@use "sass:color";
+@use "mixin";
 
 *,
 *::before,
@@ -184,6 +187,24 @@ input:not([type="submit"]):not([type="checkbox"]), textarea, select {
     }
 }
 
+@mixin input-variant(
+    $color,
+    $rgb-color: mixin.to-rgb($color),
+) {
+    --input-color: #000;
+    --input-focus-color: #000;
+    --input-background-color: #fff;
+    --input-border-color: #{rgba}(#{$rgb-color}, 0.5);
+    --input-focus-border-color: #{$color};
+    --input-focus-box-shadow-rgb: #{$rgb-color};
+}
+
+@each $color, $value in env.$input-colors {
+    .input-#{$color} {
+        @include input-variant($value);
+    }
+}
+
 button, .button, input[type="submit"], a.added_to_cart {
     display: var(--button-display, #{var.$button-display});
     font-family: var(--button-font-family, #{var.$button-font-family});
@@ -204,6 +225,10 @@ button, .button, input[type="submit"], a.added_to_cart {
     box-shadow: var(--button-box-shadow, none);
     user-select: none;
 
+    &.button-block {
+        width: 100%;
+        --button-display: block;
+    }
     &.link-button {
         --button-color: inherit;
         --button-background-color: transparent;
@@ -230,8 +255,32 @@ button, .button, input[type="submit"], a.added_to_cart {
     }
 }
 
+@mixin button-variant(
+    $color,
+    $adjusted-color: color.adjust($color, $lightness: -10%),
+    $rgb-color: mixin.to-rgb($color),
+) {
+    --button-color: #fff;
+    --button-hover-color: #fff;
+    --button-active-color: #fff;
+    --button-background-color: #{$color};
+    --button-hover-background-color: #{$adjusted-color};
+    --button-active-background-color: #{$adjusted-color};
+    --button-focus-box-shadow-rgb: #{$rgb-color};
+    --button-border-color: transparent;
+    --button-hover-border-color: transparent;
+    --button-active-border-color: transparent;
+}
+
+@each $color, $value in env.$button-colors {
+    .button-#{$color} {
+        @include button-variant($value);
+    }
+}
+
 [class^="uil-"], [class*=" uil-"] {
-    display: block;
+    display: var(--icon-display, block);
+    font-size: var(--icon-font-size, inherit);
 
     &::before {
         display: block;

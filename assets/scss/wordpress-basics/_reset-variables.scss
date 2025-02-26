@@ -75,13 +75,13 @@ $input-text-align: rtl !default;
 $input-color: #000 !default;
 $input-background-color: #fff !default;
 $input-border-width: 1px !default;
-$input-border-color: rgba(mixin.to-rgb(env.$primary-color)..., 0.5) !default;
+$input-border-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.5) !default;
 $input-border-radius: 6px !default;
 $input-width: 100% !default;
 $input-padding: 8px !default;
 $input-margin: 0 !default;
 $input-autofill-color: #000 !default;
-$input-disabled-autofill-color: rgba(mixin.to-rgb(env.$primary-color)..., 0.5) !default;
+$input-disabled-autofill-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.5) !default;
 // focus
 $input-focus-color: #000 !default;
 $input-focus-border-color: env.$primary-color !default;
