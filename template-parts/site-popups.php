@@ -25,7 +25,7 @@
                             <i class="uil uil-dashboard"></i>
                             <?php _e('Dashboard', 'fanpet'); ?>
                         </a>
-                        <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>" class="button">
+                        <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>" class="button button-accent">
                             <i class="uil uil-signout"></i>
                             <?php _e('Logout', 'fanpet'); ?>
                         </a>

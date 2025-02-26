@@ -5,14 +5,57 @@
     left: 24px;
     bottom: 24px;
     outline: 0;
-    animation: fadeOut 1s ease-out 5s forwards;
+    width: var(--notice-width, 320px);
+    font-size: 13px;
+    color: var(--notice-color);
+    background: var(--notice-background);
+    border: 1px solid var(--notice-border-color);
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeOut 1s ease-out 8s forwards;
+    z-index: 10;
+    --button-display: block;
+    --button-font-size: 12px;
+    --button-padding: 7px 10px;
+    --button-margin: 8px 0 0 0;
+    --button-border-radius: 4px;
+}
+.woocommerce-message {
+    --notice-background: #a8d99c;
+    --notice-color: #486f42;
+    --notice-border-color: #81ba73;
+}
+.woocommerce-info {
+    --notice-background: #ffd044;
+    --notice-color: #454545;
+    --notice-border-color: #ffbf00;
+}
+.woocommerce-error {
+    --notice-background: #ff9292;
+    --notice-color: #7f0000;
+    --notice-border-color: #ff6161;
 }
 
 @keyframes fadeOut {
     0% {
         opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
     }
     100% {
         opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 357px) {
+    .woocommerce-message,
+    .woocommerce-info,
+    .woocommerce-error {
+        left: 16px;
+        --notice-width: calc(100% - 32px);
     }
 }
