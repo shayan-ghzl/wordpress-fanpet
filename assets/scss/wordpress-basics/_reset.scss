@@ -187,8 +187,7 @@ input:not([type="submit"]):not([type="checkbox"]), textarea, select {
     }
 }
 
-@mixin input-variant(
-    $color,
+@mixin input-variant($color,
     $rgb-color: mixin.to-rgb($color),
 ) {
     --input-color: #000;
@@ -255,8 +254,7 @@ button, .button, input[type="submit"], a.added_to_cart {
     }
 }
 
-@mixin button-variant(
-    $color,
+@mixin button-variant($color,
     $adjusted-color: color.adjust($color, $lightness: -10%),
     $rgb-color: mixin.to-rgb($color),
 ) {
@@ -281,6 +279,7 @@ button, .button, input[type="submit"], a.added_to_cart {
 [class^="uil-"], [class*=" uil-"] {
     display: var(--icon-display, block);
     font-size: var(--icon-font-size, inherit);
+    vertical-align: middle;
 
     &::before {
         display: block;

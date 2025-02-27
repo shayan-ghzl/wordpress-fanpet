@@ -23,11 +23,11 @@
 
                         <a href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>">
                             <i class="uil uil-dashboard"></i>
-                            <?php _e('Dashboard', 'fanpet'); ?>
+                            داشبورد
                         </a>
-                        <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>" class="button button-accent">
+                        <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>" class="button button-accent button-block">
                             <i class="uil uil-signout"></i>
-                            <?php _e('Logout', 'fanpet'); ?>
+                            خروج
                         </a>
                     </div>
                 </div>

@@ -1,13 +1,34 @@
 @use "environments" as env;
 
 footer.site-footer {
+    padding: 32px 0 14px 0;
     background-color: env.$primary-color;
-    
+    --link-display: block;
+    --link-color: #fff;
+    --link-hover-color: #{env.$accent-color};
+    --paragraph-color: #fff;
+    --paragraph-font-size: 14px;
+    --heading-3-color: #{env.$accent-color};
+
     .inner-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0 auto;
     }
-    nav {
-        --list-font-size: 14px;
-        --link-hover-color: #{env.$accent-color};
+    .footer-widget-block {
+        font-size: 14px;
+        --paragraph-margin: 16px 0;
+        --link-padding: 4px 0;
+    }
+    .designer {
+        flex: 0 0 100%;
+        width: 100%;
+        --link-display: inline-block;
+        --link-color: #{env.$accent-color};
+        --link-font-weight: 500;
+        --paragraph-font-size: 12px;
+        --paragraph-margin: 24px 0 0 0;
+        --paragraph-text-align: center;
     }
 }

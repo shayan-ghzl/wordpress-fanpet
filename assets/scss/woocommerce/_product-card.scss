@@ -56,6 +56,9 @@ li.product {
         height: 48px;
     }
     .price {
+        height: 48px;
+        display: block;
+
         del {
             display: block;
             color: env.$danger-color;
@@ -67,6 +70,12 @@ li.product {
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
+        }
+        bdi {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 2px;
         }
     }
     .added_to_cart {
