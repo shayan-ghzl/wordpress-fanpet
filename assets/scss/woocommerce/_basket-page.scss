@@ -41,4 +41,24 @@
             }
         }
     }
+    .cart_totals {
+        background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+        border: 1px solid env.$primary-color;
+        border-radius: 6px;
+        padding: 12px;
+
+        .shop_table {
+            width: 100%;
+
+            td:last-child {
+                padding: 8px;
+                text-align: left;
+            }
+        }
+        .button {
+            display: block;
+            width: 100%;
+            margin-top: 12px;
+        }
+    }
 }

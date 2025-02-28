@@ -1,0 +1,9 @@
+form.woocommerce-checkout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+    gap: 24px;
+
+    #order_review_heading {
+        display: none;
+    }
+}

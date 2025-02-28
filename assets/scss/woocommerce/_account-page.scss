@@ -1,4 +1,5 @@
 @use "../wordpress-basics/environments" as env;
+@use "../wordpress-basics/mixin";
 
 .woocommerce-account {
     .woocommerce-MyAccount-navigation {
@@ -7,6 +8,7 @@
         ul {
             display: flex;
             overflow-x: auto;
+            background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
             --link-display: block;
             --link-padding: 22px 16px 20px 16px;
 

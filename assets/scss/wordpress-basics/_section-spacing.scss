@@ -9,7 +9,7 @@ section.features {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
-.woocommerce-account .woocommerce {
+.woocommerce-account .woocommerce:not(.widget_shopping_cart) {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
@@ -69,7 +69,7 @@ footer.site-footer .inner-content {
     #comments,
     .single-product .product.type-product,
     .woocommerce-notices-wrapper,
-    .woocommerce-account .woocommerce,
+    .woocommerce-account .woocommerce:not(.widget_shopping_cart),
     section.hentry,
     .related-posts {
         width: 100%;
@@ -89,7 +89,7 @@ footer.site-footer .inner-content {
     #comments,
     .woocommerce-notices-wrapper,
     .single-product .product.type-product,
-    .woocommerce-account .woocommerce,
+    .woocommerce-account .woocommerce:not(.widget_shopping_cart),
     section.hentry,
     .related-posts {
         padding: 0 16px;
