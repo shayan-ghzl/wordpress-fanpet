@@ -1,4 +1,5 @@
 @use "environments" as env;
+@use "reset-variables" as var;
 
 .custom-logo-link {
     img {
@@ -7,4 +8,13 @@
 }
 .required {
     color: env.$danger-color;
+}
+.select2-container .select2-selection--single {
+    height: 39px;
+    padding: 5px 0;
+    border-color: #{var.$input-border-color};
+    border-radius: 6px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 7px;
 }

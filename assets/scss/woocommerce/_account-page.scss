@@ -1,0 +1,135 @@
+@use "../wordpress-basics/environments" as env;
+
+.woocommerce-account {
+    .woocommerce-MyAccount-navigation {
+        border-bottom: 1px solid #ccc;
+
+        ul {
+            display: flex;
+            overflow-x: auto;
+            --link-display: block;
+            --link-padding: 22px 16px 20px 16px;
+
+            li {
+                position: relative;
+
+                &:not(.is-active) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        height: 3px;
+                        background-color: env.$primary-color;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        transition: transform 0.2s ease-in-out;
+                        transform-origin: 50% 50%;
+                        transform: scaleX(0);
+                    }
+                }
+                &:hover {
+                    &::before {
+                        transform: none;
+                    }
+                }
+            }
+        }
+        .is-active {
+            a {
+                border-bottom: 3px solid env.$primary-color;
+                --link-font-weight: 700;
+            }
+        }
+    }
+    .woocommerce-MyAccount-content {
+        padding: 46px 24px 36px 24px;
+        font-size: 14px;
+        --paragraph-font-size: 14px;
+        --input-font-size: 14px;
+
+        .woocommerce-message, .woocommerce-info, .woocommerce-error {
+            position: static;
+            animation: none;
+        }
+        p:not(:empty) {
+            label {
+                font-size: 13px;
+                font-weight: 700;
+                color: #4c4c4c;
+            }
+        }
+        em {
+            font-style: normal;
+            font-size: 13px;
+            margin-top: 4px;
+            display: block;
+        }
+    }
+    .woocommerce-address-fields__field-wrapper {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 24px;
+    }
+    #shipping_address_2_field, #billing_address_2_field {
+        --paragraph-margin: 21px 0 16px 0;
+    }
+    .woocommerce-EditAccountForm {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 24px;
+
+        .clear {
+            display: none;
+        }
+        fieldset {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin: 24px 0;
+        }
+    }
+    .woocommerce-Addresses {
+        .woocommerce-Address {
+            &:first-child {
+                margin-bottom: 24px;
+            }
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            --heading-2-font-size: 22px;
+            --heading-2-margin: 0;
+            --link-font-weight: 700;
+        }
+        address {
+            line-height: 1.5;
+        }
+    }
+    fieldset, .woocommerce-Addresses {
+        border: 1px solid #8c8c8c;
+        border-radius: 6px;
+        padding: 24px;
+        margin: 0;
+
+        legend {
+            font-weight: 700;
+            font-size: 22px;
+            padding: 0 10px;
+        }
+
+        >p.form-row:last-child {
+            margin: 0;
+        }
+    }
+    .woocommerce-orders-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #dee2e6;
+        }
+    }
+}

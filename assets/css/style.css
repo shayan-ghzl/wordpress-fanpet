@@ -623,14 +623,23 @@ section.features {
   margin: 42px auto;
 }
 
+.woocommerce-account .woocommerce {
+  width: 1340px;
+  margin: 42px auto;
+}
+
 section.product-categories {
+  width: 1340px;
+  margin: 42px auto;
+}
+
+section.hentry {
   width: 1340px;
   margin: 42px auto;
 }
 
 .woocommerce-notices-wrapper {
   width: 1340px;
-  margin: 36px auto;
 }
 
 .single-product .product.type-product {
@@ -686,6 +695,8 @@ footer.site-footer .inner-content {
   #comments,
   .single-product .product.type-product,
   .woocommerce-notices-wrapper,
+  .woocommerce-account .woocommerce,
+  section.hentry,
   .related-posts {
     width: 100%;
     padding: 0 24px;
@@ -704,6 +715,8 @@ footer.site-footer .inner-content {
   #comments,
   .woocommerce-notices-wrapper,
   .single-product .product.type-product,
+  .woocommerce-account .woocommerce,
+  section.hentry,
   .related-posts {
     padding: 0 16px;
   }
@@ -714,6 +727,17 @@ footer.site-footer .inner-content {
 
 .required {
   color: #dc3545;
+}
+
+.select2-container .select2-selection--single {
+  height: 39px;
+  padding: 5px 0;
+  border-color: rgba(97, 58, 188, 0.5);
+  border-radius: 6px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 7px;
 }
 
 li.product {
@@ -805,7 +829,7 @@ ul.products {
 }
 
 .site-popups .dm-toggler {
-  --button-padding: 10px;
+  --button-padding: 10px 14px;
 }
 .site-popups .basket-popup {
   --dm-popup-width: 330px;
@@ -1043,6 +1067,155 @@ ul.products {
     --notice-width: calc(100% - 32px);
   }
 }
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  border-bottom: 1px solid #ccc;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  display: flex;
+  overflow-x: auto;
+  --link-display: block;
+  --link-padding: 22px 16px 20px 16px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  position: relative;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li:not(.is-active)::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #613abc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: 50% 50%;
+  transform: scaleX(0);
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li:hover::before {
+  transform: none;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation .is-active a {
+  border-bottom: 3px solid #613abc;
+  --link-font-weight: 700;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  padding: 46px 24px 36px 24px;
+  font-size: 14px;
+  --paragraph-font-size: 14px;
+  --input-font-size: 14px;
+}
+.woocommerce-account .woocommerce-MyAccount-content .woocommerce-message, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-info, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-error {
+  position: static;
+  animation: none;
+}
+.woocommerce-account .woocommerce-MyAccount-content p:not(:empty) label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4c4c4c;
+}
+.woocommerce-account .woocommerce-MyAccount-content em {
+  font-style: normal;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+.woocommerce-account .woocommerce-address-fields__field-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 24px;
+}
+.woocommerce-account #shipping_address_2_field, .woocommerce-account #billing_address_2_field {
+  --paragraph-margin: 21px 0 16px 0;
+}
+.woocommerce-account .woocommerce-EditAccountForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 24px;
+}
+.woocommerce-account .woocommerce-EditAccountForm .clear {
+  display: none;
+}
+.woocommerce-account .woocommerce-EditAccountForm fieldset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 24px 0;
+}
+.woocommerce-account .woocommerce-Addresses .woocommerce-Address:first-child {
+  margin-bottom: 24px;
+}
+.woocommerce-account .woocommerce-Addresses header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  --heading-2-font-size: 22px;
+  --heading-2-margin: 0;
+  --link-font-weight: 700;
+}
+.woocommerce-account .woocommerce-Addresses address {
+  line-height: 1.5;
+}
+.woocommerce-account fieldset, .woocommerce-account .woocommerce-Addresses {
+  border: 1px solid #8c8c8c;
+  border-radius: 6px;
+  padding: 24px;
+  margin: 0;
+}
+.woocommerce-account fieldset legend, .woocommerce-account .woocommerce-Addresses legend {
+  font-weight: 700;
+  font-size: 22px;
+  padding: 0 10px;
+}
+.woocommerce-account fieldset > p.form-row:last-child, .woocommerce-account .woocommerce-Addresses > p.form-row:last-child {
+  margin: 0;
+}
+.woocommerce-account .woocommerce-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.woocommerce-account .woocommerce-orders-table th, .woocommerce-account .woocommerce-orders-table td {
+  padding: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.woocommerce-cart .woocommerce {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 330px);
+  gap: 24px;
+}
+.woocommerce-cart .woocommerce-notices-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  border: 1px solid #613abc;
+  border-radius: 6px;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table th, .woocommerce-cart .woocommerce-cart-form .shop_table td {
+  padding: 12px;
+  border-bottom: 1px solid #613abc;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table thead {
+  background-color: rgba(97, 58, 188, 0.1);
+  white-space: nowrap;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table .actions {
+  background-color: rgba(97, 58, 188, 0.1);
+  border-bottom-width: 0;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table .product-remove .remove {
+  color: #dc3545;
+  font-size: 35px;
+}
+.woocommerce-cart .woocommerce-cart-form .shop_table .attachment-woocommerce_thumbnail {
+  width: 100px;
+  height: auto;
+}
+
 .star-rating {
   display: inline-block;
   position: relative;

@@ -9,13 +9,20 @@ section.features {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
+.woocommerce-account .woocommerce {
+    width: env.$layout-max-width;
+    margin: 42px auto;
+}
 section.product-categories {
+    width: env.$layout-max-width;
+    margin: 42px auto;
+}
+section.hentry {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
 .woocommerce-notices-wrapper {
     width: env.$layout-max-width;
-    margin: 36px auto;
 }
 .single-product .product.type-product {
     width: env.$layout-max-width;
@@ -62,6 +69,8 @@ footer.site-footer .inner-content {
     #comments,
     .single-product .product.type-product,
     .woocommerce-notices-wrapper,
+    .woocommerce-account .woocommerce,
+    section.hentry,
     .related-posts {
         width: 100%;
         padding: 0 24px;
@@ -80,6 +89,8 @@ footer.site-footer .inner-content {
     #comments,
     .woocommerce-notices-wrapper,
     .single-product .product.type-product,
+    .woocommerce-account .woocommerce,
+    section.hentry,
     .related-posts {
         padding: 0 16px;
     }

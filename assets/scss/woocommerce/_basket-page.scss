@@ -1,0 +1,44 @@
+@use "../wordpress-basics/environments" as env;
+@use "../wordpress-basics/mixin";
+
+.woocommerce-cart {
+    .woocommerce {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 330px);
+        gap: 24px;
+    }
+    .woocommerce-notices-wrapper {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .woocommerce-cart-form {
+        .shop_table {
+            width: 100%;
+            text-align: right;
+            font-size: 14px;
+            border: 1px solid env.$primary-color;
+            border-radius: 6px;
+
+            th, td {
+                padding: 12px;
+                border-bottom: 1px solid env.$primary-color;
+            }
+            thead {
+                background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+                white-space: nowrap;
+            }
+            .actions {
+                background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+                border-bottom-width: 0;
+            }
+            .product-remove .remove {
+                color: env.$danger-color;
+                font-size: 35px;
+            }
+            .attachment-woocommerce_thumbnail {
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+}

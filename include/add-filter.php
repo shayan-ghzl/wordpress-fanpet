@@ -7,6 +7,8 @@ add_filter('woocommerce_single_product_flexslider_enabled', '__return_false');
 add_filter('woocommerce_single_product_photoswipe_enabled', '__return_false');
 // disable woocommerce zoom for product gallery
 add_filter('woocommerce_single_product_zoom_enabled', '__return_false');
+// show basket popup in cart & checkout page also
+add_filter('woocommerce_widget_cart_is_hidden', '__return_false');
 // customize showing(the way rates are displayed) rates
 add_filter('woocommerce_get_star_rating_html', function ($html, $rating, $count) {
     return '
