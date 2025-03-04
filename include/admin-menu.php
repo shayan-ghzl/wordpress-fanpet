@@ -3,7 +3,7 @@ function custom_admin_page()
 {
     add_menu_page(
         'قالب فن پت',
-        'نارسیس',
+        'آموزش ها',
         'manage_options', // only super admin can see
         'fanpet', // slug
         'custom_admin_page_content', // function name

@@ -1325,6 +1325,7 @@ form.woocommerce-checkout #place_order {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 100px;
   --paragraph-font-size: 14px;
 }
 .login-page #woocommerce-form-login,
