@@ -269,7 +269,7 @@ button.button-block, .button.button-block, input[type=submit].button-block, a.ad
   --button-display: block;
 }
 button.link-button, .button.link-button, input[type=submit].link-button, a.added_to_cart.link-button {
-  --button-color: inherit;
+  --button-color: currentColor;
   --button-background-color: transparent;
 }
 button:not(.link-button):focus, .button:not(.link-button):focus, input[type=submit]:not(.link-button):focus, a.added_to_cart:not(.link-button):focus {
@@ -552,67 +552,29 @@ footer.site-footer .designer {
   white-space: nowrap;
 }
 
-section.single-post {
-  display: grid;
-  grid-template-columns: 256px minmax(0, 1fr);
-}
-section.single-post .post-video {
+article.single-post .post-video {
   position: relative;
   width: 100%;
   height: 0;
   padding-top: 56%;
   margin-bottom: 16px;
 }
-section.single-post .post-video iframe {
+article.single-post .post-video iframe {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
-section.single-post .post-thumbnail {
+article.single-post .post-thumbnail {
   position: relative;
   margin-bottom: 16px;
   overflow: hidden;
 }
-section.single-post .post-thumbnail .wp-post-image {
+article.single-post .post-thumbnail .wp-post-image {
   display: block;
   width: 100%;
 }
-section.single-post aside {
-  padding-left: 24px;
-}
 
-aside .post-details, aside .posts-categories-widget {
-  font-size: 14px;
-  margin-bottom: 24px;
-  padding: 12px;
-  border: 1px solid #613abc;
-  --item-margin: 0 0 10px 0;
-}
-aside .post-details strong, aside .posts-categories-widget strong {
-  display: inline-block;
-}
-aside .post-details .date, aside .posts-categories-widget .date {
-  display: block;
-  margin: 8px 0;
-}
-aside .post-details .avatar, aside .posts-categories-widget .avatar {
-  display: block;
-  margin: 0 auto 48px auto;
-  border-radius: 50%;
-}
-aside .post-details .cat-item a, aside .posts-categories-widget .cat-item a {
-  display: inline-block;
-}
-
-@media (max-width: 768px) {
-  section.single-post {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  section.single-post aside {
-    padding: 0;
-  }
-}
 section.hero {
   width: 1340px;
   margin: 0 auto;
@@ -623,7 +585,7 @@ section.features {
   margin: 42px auto;
 }
 
-.woocommerce-account .woocommerce:not(.widget_shopping_cart) {
+.woocommerce-account .my-account-page {
   width: 1340px;
   margin: 42px auto;
 }
@@ -666,7 +628,7 @@ header.site-header {
   margin: 0 auto 42px auto;
 }
 
-section.single-post {
+article.single-post {
   width: 1340px;
   margin: 0 auto 42px auto;
 }
@@ -691,11 +653,11 @@ footer.site-footer .inner-content {
 @media (max-width: 1388px) {
   .post-archive,
   .latest-posts,
-  section.single-post,
+  article.single-post,
   #comments,
   .single-product .product.type-product,
   .woocommerce-notices-wrapper,
-  .woocommerce-account .woocommerce:not(.widget_shopping_cart),
+  .woocommerce-account .my-account-page,
   section.hentry,
   .related-posts {
     width: 100%;
@@ -711,11 +673,11 @@ footer.site-footer .inner-content {
 @media (max-width: 576px) {
   .post-archive,
   .latest-posts,
-  section.single-post,
+  article.single-post,
   #comments,
   .woocommerce-notices-wrapper,
   .single-product .product.type-product,
-  .woocommerce-account .woocommerce:not(.widget_shopping_cart),
+  .woocommerce-account .my-account-page,
   section.hentry,
   .related-posts {
     padding: 0 16px;
@@ -742,6 +704,36 @@ footer.site-footer .inner-content {
 
 .d-none {
   display: none !important;
+}
+
+.woocommerce-password-strength {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.woocommerce-password-strength.short, .woocommerce-password-strength.bad {
+  color: #dc3545;
+}
+.woocommerce-password-strength.good {
+  color: #fd7e14;
+}
+.woocommerce-password-strength.strong {
+  color: #198754;
+}
+
+.form-field-password {
+  position: relative;
+  --input-padding: 8px 8px 8px 50px;
+}
+.form-field-password button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+}
+.form-field-password svg {
+  fill: rgba(44, 44, 44, 0.5019607843);
 }
 
 li.product {
@@ -1298,15 +1290,87 @@ form.woocommerce-checkout #place_order {
   --button-padding: 16px;
 }
 
-.woocommerce-account #woocommerce-form-login,
-.woocommerce-account #woocommerce-form-register,
-.woocommerce-account #woocommerce-form-reset-password {
+.login-page {
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../images/login.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  --paragraph-font-size: 14px;
+}
+.login-page #woocommerce-form-login,
+.login-page #woocommerce-form-register,
+.login-page #woocommerce-form-reset-password {
   display: none;
 }
-.woocommerce-account #woocommerce-form-login.form-active,
-.woocommerce-account #woocommerce-form-register.form-active,
-.woocommerce-account #woocommerce-form-reset-password.form-active {
+.login-page #woocommerce-form-login.form-active,
+.login-page #woocommerce-form-register.form-active,
+.login-page #woocommerce-form-reset-password.form-active {
   display: block;
+}
+.login-page p:empty {
+  display: none;
+}
+.login-page .woocommerce-privacy-policy-link {
+  border-bottom: 1px solid rgba(97, 58, 188, 0.5);
+  --link-font-weight: 500;
+  --link-color: #613abc;
+  --link-hover-color: #FFA200;
+}
+.login-page .woocommerce {
+  width: 320px;
+  background-color: rgba(243, 243, 243, 0.7490196078);
+  border: 1px solid #613abc;
+  border-radius: 8px;
+  padding: 16px;
+}
+.login-page label {
+  display: block;
+}
+.login-page label:not([for=password]):not(.woocommerce-form__label-for-checkbox) {
+  margin-bottom: 5px;
+}
+.login-page label[for=password] {
+  margin-bottom: -11px;
+}
+.login-page label.woocommerce-form__label-for-checkbox {
+  padding-right: 8px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.login-page label.woocommerce-form__label-for-checkbox input {
+  margin: 0;
+}
+.login-page button[type=submit] {
+  margin-top: 18px;
+  --button-padding: 13px 16px;
+}
+.login-page .switchs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #2c2c2c;
+  --button-font-size: 13px;
+}
+.login-page nav ul {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  --list-font-size: 14px;
+  --list-font-weight: 500;
+  --link-color: #613abc;
+  --link-hover-color: #FFA200;
 }
 
 .star-rating {

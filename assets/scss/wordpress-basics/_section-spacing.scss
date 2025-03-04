@@ -9,7 +9,7 @@ section.features {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
-.woocommerce-account .woocommerce:not(.widget_shopping_cart) {
+.woocommerce-account .my-account-page {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
@@ -43,7 +43,7 @@ header.site-header {
     width: env.$layout-max-width;
     margin: 0 auto 42px auto;
 }
-section.single-post {
+article.single-post {
     width: env.$layout-max-width;
     margin: 0 auto 42px auto;
 }
@@ -65,11 +65,11 @@ footer.site-footer .inner-content {
 @include brk.layout {
     .post-archive,
     .latest-posts,
-    section.single-post,
+    article.single-post,
     #comments,
     .single-product .product.type-product,
     .woocommerce-notices-wrapper,
-    .woocommerce-account .woocommerce:not(.widget_shopping_cart),
+    .woocommerce-account .my-account-page,
     section.hentry,
     .related-posts {
         width: 100%;
@@ -85,11 +85,11 @@ footer.site-footer .inner-content {
 @include brk.mobile {
     .post-archive,
     .latest-posts,
-    section.single-post,
+    article.single-post,
     #comments,
     .woocommerce-notices-wrapper,
     .single-product .product.type-product,
-    .woocommerce-account .woocommerce:not(.widget_shopping_cart),
+    .woocommerce-account .my-account-page,
     section.hentry,
     .related-posts {
         padding: 0 16px;

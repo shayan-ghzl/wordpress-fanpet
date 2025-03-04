@@ -45,7 +45,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 				<label for="password"><?php esc_html_e('Password', 'woocommerce'); ?>&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text"><?php esc_html_e('Required', 'woocommerce'); ?></span></label>
 				<div class="form-field-password">
 					<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" required aria-required="true" />
-					<button type="button" class="password-visibility">
+					<button type="button" class="password-visibility link-button">
 						<svg class="eye d-none" width="20" height="20" viewBox="0 0 20 20">
 							<g transform="translate(-843 -487)">
 								<rect width="20" height="20" transform="translate(843 487)" fill="none" />
@@ -70,9 +70,6 @@ do_action('woocommerce_before_customer_login_form'); ?>
 				</label>
 				<?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
 				<button type="submit" class="woocommerce-button button-block button woocommerce-form-login__submit<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
-			</p>
-			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
 			</p>
 
 			<div class="switchs-container">
@@ -109,7 +106,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="reg_email"><?php esc_html_e('Email address', 'woocommerce'); ?>&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text"><?php esc_html_e('Required', 'woocommerce'); ?></span></label>
 					<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo (! empty($_POST['email'])) ? esc_attr(wp_unslash($_POST['email'])) : ''; ?>" required aria-required="true" /><?php // @codingStandardsIgnoreLine 
-																																																																								?>
+																																																																		?>
 				</p>
 
 				<?php if ('no' === get_option('woocommerce_registration_generate_password')) : ?>

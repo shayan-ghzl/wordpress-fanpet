@@ -1,4 +1,21 @@
-.woocommerce-account {
+@use "../wordpress-basics/environments" as env;
+@use "../wordpress-basics/mixin";
+
+.login-page {
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('../images/login.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    // paragraph
+    --paragraph-font-size: 14px;
+
     #woocommerce-form-login,
     #woocommerce-form-register,
     #woocommerce-form-reset-password {
@@ -6,6 +23,68 @@
 
         &.form-active {
             display: block;
+        }
+    }
+    p:empty {
+        display: none;
+    }
+    .woocommerce-privacy-policy-link {
+        border-bottom: 1px solid #{rgba}(mixin.to-rgb(env.$primary-color), 0.5);
+        --link-font-weight: 500;
+        --link-color: #{env.$primary-color};
+        --link-hover-color: #{env.$accent-color};
+    }
+    .woocommerce {
+        width: 320px;
+        background-color: #f3f3f3bf;
+        border: 1px solid env.$primary-color;
+        border-radius: 8px;
+        padding: 16px;
+    }
+    label {
+        display: block;
+
+        &:not([for="password"]):not(.woocommerce-form__label-for-checkbox) {
+            margin-bottom: 5px;
+        }
+        &[for="password"] {
+            margin-bottom: -11px;
+        }
+        &.woocommerce-form__label-for-checkbox {
+            padding-right: 8px;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+
+            input {
+                margin: 0;
+            }
+        }
+    }
+    button[type="submit"] {
+        margin-top: 18px;
+        --button-padding: 13px 16px;
+    }
+    .switchs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        color: #2c2c2c;
+        --button-font-size: 13px;
+    }
+    nav {
+        ul {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            --list-font-size: 14px;
+            --list-font-weight: 500;
+            --link-color: #{env.$primary-color};
+            --link-hover-color: #{env.$accent-color};
         }
     }
 }

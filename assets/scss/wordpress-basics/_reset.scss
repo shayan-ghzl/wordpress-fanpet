@@ -229,7 +229,7 @@ button, .button, input[type="submit"], a.added_to_cart {
         --button-display: block;
     }
     &.link-button {
-        --button-color: inherit;
+        --button-color: currentColor;
         --button-background-color: transparent;
     }
     &:not(.link-button) {

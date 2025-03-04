@@ -21,3 +21,33 @@
 .d-none {
     display: none !important;
 }
+.woocommerce-password-strength {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+
+    &.short, &.bad {
+        color: env.$danger-color;
+    }
+    &.good {
+        color: env.$orange-color;
+    }
+    &.strong {
+        color: env.$green-color;
+    }
+}
+.form-field-password {
+    position: relative;
+    --input-padding: 8px 8px 8px 50px;
+
+    button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1;
+    }
+    svg {
+        fill: #2c2c2c80;
+    }
+}

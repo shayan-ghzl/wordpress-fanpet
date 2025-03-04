@@ -1,10 +1,7 @@
 @use "environments" as env;
 @use "breakpoints" as brk;
 
-section.single-post {
-    display: grid;
-    grid-template-columns: 256px minmax(0, 1fr);
-
+article.single-post {
     .post-video {
         position: relative;
         width: 100%;
@@ -28,42 +25,5 @@ section.single-post {
             display: block;
             width: 100%;
         }
-    }
-    aside {
-        padding-left: 24px;
-    }
-}
-aside {
-    .post-details, .posts-categories-widget {
-        font-size: 14px;
-        margin-bottom: 24px;
-        padding: 12px;
-        border: 1px solid env.$primary-color;
-        --item-margin: 0 0 10px 0;
-
-        strong {
-            display: inline-block;
-        }
-        .date {
-            display: block;
-            margin: 8px 0;
-        }
-        .avatar {
-            display: block;
-            margin: 0 auto 48px auto;
-            border-radius: 50%;
-        }
-        .cat-item a {
-            display: inline-block;
-        }
-    }
-}
-
-@include brk.tablet {
-    section.single-post {
-        grid-template-columns: minmax(0, 1fr);
-    }
-    section.single-post aside {
-        padding: 0;
     }
 }
