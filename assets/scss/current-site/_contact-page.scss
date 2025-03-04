@@ -1,0 +1,29 @@
+@use "../../scss/wordpress-basics/environments" as env;
+
+.contact-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 42px;
+}
+.wpforms-field-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 4px 4px 0;
+}
+.wpforms-field {
+    margin-bottom: 16px;
+}
+.wpforms-submit {
+    margin: 24px auto 0 0;
+    --button-display: block;
+    --button-padding: 14px 32px;
+}
+.wpforms-error {
+    display: block;
+    color: env.$danger-color;
+    margin-top: 4px;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+}

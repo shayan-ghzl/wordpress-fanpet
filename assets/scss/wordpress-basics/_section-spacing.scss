@@ -9,50 +9,58 @@ section.features {
     width: env.$layout-max-width;
     margin: 42px auto;
 }
+.contact-page {
+    width: env.$layout-max-width;
+    margin: 42px auto 72px auto;
+}
+body.woocommerce-shop .content-area {
+    width: env.$layout-max-width;
+    margin: 42px auto 72px auto;
+}
 .woocommerce-account .my-account-page {
     width: env.$layout-max-width;
-    margin: 42px auto;
+    margin: 72px auto;
 }
 section.product-categories {
     width: env.$layout-max-width;
-    margin: 42px auto;
+    margin: 72px auto;
 }
 section.hentry {
     width: env.$layout-max-width;
-    margin: 42px auto;
+    margin: 72px auto;
 }
 .woocommerce-notices-wrapper {
     width: env.$layout-max-width;
 }
 .single-product .product.type-product {
     width: env.$layout-max-width;
-    margin: 42px auto;
+    margin: 72px auto;
 }
 section.trending-products {
     width: env.$layout-max-width;
-    margin: 42px auto;
+    margin: 72px auto;
 }
 header.site-header {
     margin-bottom: 24px;
 }
 .post-archive {
     width: env.$layout-max-width;
-    margin: 0 auto 42px auto;
+    margin: 0 auto 72px auto;
 }
 .latest-posts {
     width: env.$layout-max-width;
-    margin: 0 auto 42px auto;
+    margin: 0 auto 72px auto;
 }
 article.single-post {
     width: env.$layout-max-width;
-    margin: 0 auto 42px auto;
+    margin: 0 auto 72px auto;
 }
 .related-posts {
     width: env.$layout-max-width;
-    margin: 0 auto 42px auto;
+    margin: 0 auto 72px auto;
 }
 #comments {
-    margin: 0 auto 42px auto;
+    margin: 0 auto 72px auto;
 }
 .post-cards-grid-container,
 #comments,
@@ -71,6 +79,8 @@ footer.site-footer .inner-content {
     .woocommerce-notices-wrapper,
     .woocommerce-account .my-account-page,
     section.hentry,
+    body.woocommerce-shop .content-area,
+    .contact-page,
     .related-posts {
         width: 100%;
         padding: 0 24px;
@@ -91,6 +101,8 @@ footer.site-footer .inner-content {
     .single-product .product.type-product,
     .woocommerce-account .my-account-page,
     section.hentry,
+    body.woocommerce-shop .content-area,
+    .contact-page,
     .related-posts {
         padding: 0 16px;
     }

@@ -6,7 +6,7 @@
         display: block;
     }
 }
-.required {
+.required, .wpforms-required-label {
     color: env.$danger-color;
 }
 .select2-container .select2-selection--single {
@@ -20,6 +20,9 @@
 }
 .d-none {
     display: none !important;
+}
+.wpforms-hidden {
+    display: none;
 }
 .woocommerce-password-strength {
     margin-top: 12px;

@@ -585,19 +585,29 @@ section.features {
   margin: 42px auto;
 }
 
+.contact-page {
+  width: 1340px;
+  margin: 42px auto 72px auto;
+}
+
+body.woocommerce-shop .content-area {
+  width: 1340px;
+  margin: 42px auto 72px auto;
+}
+
 .woocommerce-account .my-account-page {
   width: 1340px;
-  margin: 42px auto;
+  margin: 72px auto;
 }
 
 section.product-categories {
   width: 1340px;
-  margin: 42px auto;
+  margin: 72px auto;
 }
 
 section.hentry {
   width: 1340px;
-  margin: 42px auto;
+  margin: 72px auto;
 }
 
 .woocommerce-notices-wrapper {
@@ -606,12 +616,12 @@ section.hentry {
 
 .single-product .product.type-product {
   width: 1340px;
-  margin: 42px auto;
+  margin: 72px auto;
 }
 
 section.trending-products {
   width: 1340px;
-  margin: 42px auto;
+  margin: 72px auto;
 }
 
 header.site-header {
@@ -620,26 +630,26 @@ header.site-header {
 
 .post-archive {
   width: 1340px;
-  margin: 0 auto 42px auto;
+  margin: 0 auto 72px auto;
 }
 
 .latest-posts {
   width: 1340px;
-  margin: 0 auto 42px auto;
+  margin: 0 auto 72px auto;
 }
 
 article.single-post {
   width: 1340px;
-  margin: 0 auto 42px auto;
+  margin: 0 auto 72px auto;
 }
 
 .related-posts {
   width: 1340px;
-  margin: 0 auto 42px auto;
+  margin: 0 auto 72px auto;
 }
 
 #comments {
-  margin: 0 auto 42px auto;
+  margin: 0 auto 72px auto;
 }
 
 .post-cards-grid-container,
@@ -659,6 +669,8 @@ footer.site-footer .inner-content {
   .woocommerce-notices-wrapper,
   .woocommerce-account .my-account-page,
   section.hentry,
+  body.woocommerce-shop .content-area,
+  .contact-page,
   .related-posts {
     width: 100%;
     padding: 0 24px;
@@ -679,6 +691,8 @@ footer.site-footer .inner-content {
   .single-product .product.type-product,
   .woocommerce-account .my-account-page,
   section.hentry,
+  body.woocommerce-shop .content-area,
+  .contact-page,
   .related-posts {
     padding: 0 16px;
   }
@@ -687,7 +701,7 @@ footer.site-footer .inner-content {
   display: block;
 }
 
-.required {
+.required, .wpforms-required-label {
   color: #dc3545;
 }
 
@@ -704,6 +718,10 @@ footer.site-footer .inner-content {
 
 .d-none {
   display: none !important;
+}
+
+.wpforms-hidden {
+  display: none;
 }
 
 .woocommerce-password-strength {
@@ -820,12 +838,15 @@ li.product .added_to_cart {
 
 ul.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  gap: 24px 16px;
 }
 
 .site-popups .dm-toggler {
   --button-padding: 10px 14px;
+}
+.site-popups .login-page-button {
+  --link-padding: 10px 14px;
 }
 .site-popups .basket-popup {
   --dm-popup-width: 330px;
@@ -941,7 +962,7 @@ ul.products {
   --button-hover-color: #000;
   --button-active-color: #000;
   --button-border-radius: 3px;
-  --button-padding: 4px 16px;
+  --button-padding: 5px 16px;
   --button-margin: 16px 0 0 0;
   --button-font-size: 13px;
 }
@@ -1373,6 +1394,25 @@ form.woocommerce-checkout #place_order {
   --link-hover-color: #FFA200;
 }
 
+body.woocommerce-shop .content-area .woocommerce-result-count {
+  display: none;
+}
+body.woocommerce-shop .content-area .woocommerce-ordering {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 32px;
+  padding-bottom: 14px;
+}
+body.woocommerce-shop .content-area .woocommerce-ordering select {
+  display: block;
+  width: 264px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.314' height='11.314' viewBox='0 0 11.314 11.314'%3E%3Cpath d='M733,532.875h6v6' transform='translate(905.012 -135.853) rotate(135)' fill='none' stroke='%232c2c2c' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-width: 2px;
+}
+
 .star-rating {
   display: inline-block;
   position: relative;
@@ -1603,4 +1643,36 @@ form.woocommerce-checkout #place_order {
 }
 .single-product .product.type-product .woocommerce-Tabs-panel {
   padding: 42px 12px 0 12px;
+}
+
+.contact-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 42px;
+}
+
+.wpforms-field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 4px 4px 0;
+}
+
+.wpforms-field {
+  margin-bottom: 16px;
+}
+
+.wpforms-submit {
+  margin: 24px auto 0 0;
+  --button-display: block;
+  --button-padding: 14px 32px;
+}
+
+.wpforms-error {
+  display: block;
+  color: #dc3545;
+  margin-top: 4px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
 }

@@ -10,21 +10,7 @@
         endif;
         ?>
     </div>
-
-    <div>
-        <?php
-        $my_picture_setting = hooshang_get_theme_mod("my_picture_setting");
-        if ($my_picture_setting) :
-        ?>
-            <div class="image-wrapper">
-                <img src="<?php echo esc_url($my_picture_setting); ?>" alt="about me">
-            </div>
-        <?php endif; ?>
-
-        <?php
-        echo do_shortcode('[wpforms id="99" title="false"]');
-        ?>
-    </div>
+    <?php echo do_shortcode('[wpforms id="184" title="false"]'); ?>
 </section>
 
 <?php get_footer(); ?>
