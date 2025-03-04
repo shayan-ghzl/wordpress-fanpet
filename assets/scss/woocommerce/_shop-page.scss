@@ -1,4 +1,4 @@
-body.woocommerce-shop .content-area {
+body.woocommerce-shop .content-area, body.woocommerce-page.archive .content-area {
     .woocommerce-result-count {
         display: none;
     }
@@ -10,7 +10,8 @@ body.woocommerce-shop .content-area {
         select {
             display: block;
             width: 264px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.314' height='11.314' viewBox='0 0 11.314 11.314'%3E%3Cpath d='M733,532.875h6v6' transform='translate(905.012 -135.853) rotate(135)' fill='none' stroke='%232c2c2c' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.314' height='11.314' viewBox='0 0 11.314 11.314'%3E%3Cpath d='M733,532.875h6v6' transform='translate(905.012 -135.853) rotate(135)' fill='none' stroke='%232c2c2c' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
             background-position: 12px 12px;
             font-size: 14px;
             font-weight: 500;

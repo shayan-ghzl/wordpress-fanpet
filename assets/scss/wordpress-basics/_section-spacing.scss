@@ -13,7 +13,7 @@ section.features {
     width: env.$layout-max-width;
     margin: 42px auto 72px auto;
 }
-body.woocommerce-shop .content-area {
+body.woocommerce-shop .content-area, body.woocommerce-page.archive .content-area {
     width: env.$layout-max-width;
     margin: 42px auto 72px auto;
 }
@@ -80,6 +80,7 @@ footer.site-footer .inner-content {
     .woocommerce-account .my-account-page,
     section.hentry,
     body.woocommerce-shop .content-area,
+    body.woocommerce-page.archive .content-area,
     .contact-page,
     .related-posts {
         width: 100%;
@@ -102,6 +103,7 @@ footer.site-footer .inner-content {
     .woocommerce-account .my-account-page,
     section.hentry,
     body.woocommerce-shop .content-area,
+    body.woocommerce-page.archive .content-area,
     .contact-page,
     .related-posts {
         padding: 0 16px;

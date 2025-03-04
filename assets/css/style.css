@@ -590,7 +590,7 @@ section.features {
   margin: 42px auto 72px auto;
 }
 
-body.woocommerce-shop .content-area {
+body.woocommerce-shop .content-area, body.woocommerce-page.archive .content-area {
   width: 1340px;
   margin: 42px auto 72px auto;
 }
@@ -670,6 +670,7 @@ footer.site-footer .inner-content {
   .woocommerce-account .my-account-page,
   section.hentry,
   body.woocommerce-shop .content-area,
+  body.woocommerce-page.archive .content-area,
   .contact-page,
   .related-posts {
     width: 100%;
@@ -692,6 +693,7 @@ footer.site-footer .inner-content {
   .woocommerce-account .my-account-page,
   section.hentry,
   body.woocommerce-shop .content-area,
+  body.woocommerce-page.archive .content-area,
   .contact-page,
   .related-posts {
     padding: 0 16px;
@@ -838,7 +840,7 @@ li.product .added_to_cart {
 
 ul.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 370px));
   gap: 24px 16px;
 }
 
@@ -1394,15 +1396,15 @@ form.woocommerce-checkout #place_order {
   --link-hover-color: #FFA200;
 }
 
-body.woocommerce-shop .content-area .woocommerce-result-count {
+body.woocommerce-shop .content-area .woocommerce-result-count, body.woocommerce-page.archive .content-area .woocommerce-result-count {
   display: none;
 }
-body.woocommerce-shop .content-area .woocommerce-ordering {
+body.woocommerce-shop .content-area .woocommerce-ordering, body.woocommerce-page.archive .content-area .woocommerce-ordering {
   border-bottom: 1px solid #aaa;
   margin-bottom: 32px;
   padding-bottom: 14px;
 }
-body.woocommerce-shop .content-area .woocommerce-ordering select {
+body.woocommerce-shop .content-area .woocommerce-ordering select, body.woocommerce-page.archive .content-area .woocommerce-ordering select {
   display: block;
   width: 264px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.314' height='11.314' viewBox='0 0 11.314 11.314'%3E%3Cpath d='M733,532.875h6v6' transform='translate(905.012 -135.853) rotate(135)' fill='none' stroke='%232c2c2c' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
