@@ -740,6 +740,10 @@ footer.site-footer .inner-content {
   top: 7px;
 }
 
+.d-none {
+  display: none !important;
+}
+
 li.product {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.2509803922);
@@ -1292,6 +1296,17 @@ form.woocommerce-checkout #place_order {
   display: block;
   width: 100%;
   --button-padding: 16px;
+}
+
+.woocommerce-account #woocommerce-form-login,
+.woocommerce-account #woocommerce-form-register,
+.woocommerce-account #woocommerce-form-reset-password {
+  display: none;
+}
+.woocommerce-account #woocommerce-form-login.form-active,
+.woocommerce-account #woocommerce-form-register.form-active,
+.woocommerce-account #woocommerce-form-reset-password.form-active {
+  display: block;
 }
 
 .star-rating {

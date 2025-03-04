@@ -1,6 +1,6 @@
 "use strict";
 class LayoutPopup {
-    constructor () {
+    constructor() {
         this.popupBtnNodes = document.querySelectorAll(".drop-menu-container .dm-toggler");
         this.dropMenuContainer = document.querySelectorAll(".drop-menu-container");
         this.events();
@@ -51,7 +51,7 @@ class LayoutPopup {
     }
 }
 class PassVisibility {
-    constructor (element) {
+    constructor(element) {
         this.passVisibilityBtn = element;
         this.hideIcon = element.children[0];
         this.showIcon = element.children[1];
@@ -75,16 +75,67 @@ class PassVisibility {
         document.querySelectorAll("button.password-visibility").forEach(element => new PassVisibility(element));
     }
 }
+class Switch {
+    constructor(Element) {
+        this.switchBtn = Element;
+        this.switchTarget = document.querySelector(Element.getAttribute("href"));
+        this.events();
+    }
+    events() {
+        this.switchBtn.addEventListener("click", this.clickHandler.bind(this));
+    }
+    clickHandler() {
+        const activeForm = jQuery('.form-active');
+        activeForm.addClass('processing').block({
+            message: "",
+            overlayCSS: {
+                background: '#fff',
+                opacity: 0.6
+            }
+        });
+        setTimeout(this.timeoutHandler.bind(this, activeForm), 3000);
+    }
+    timeoutHandler(activeForm) {
+        var _a;
+        activeForm.removeClass('form-active processing').unblock();
+        (_a = this.switchTarget) === null || _a === void 0 ? void 0 : _a.classList.add("form-active");
+    }
+    static initSwitch() {
+        var _a;
+        switch (window.location.hash) {
+            case "#woocommerce-form-register":
+                const doesFormExist = document.querySelector("#woocommerce-form-register");
+                if (doesFormExist) {
+                    doesFormExist.classList.add("form-active");
+                }
+                else {
+                    document.querySelector("#woocommerce-form-login").classList.add("form-active");
+                }
+                break;
+            case "#woocommerce-form-reset-password":
+                document.querySelector("#woocommerce-form-reset-password").classList.add("form-active");
+                break;
+            default:
+                (_a = document.querySelector("#woocommerce-form-login")) === null || _a === void 0 ? void 0 : _a.classList.add("form-active");
+                break;
+        }
+        document.querySelectorAll(".switch-form").forEach((Element) => {
+            new Switch(Element);
+        });
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     PassVisibility.init_pass_visibility();
     new LayoutPopup();
-
+    Switch.initSwitch();
     if (document.body.classList.contains('home')) {
+        // @ts-ignore:
         new Swiper('.hero .swiper', {
             slidesPerView: 1,
             loop: true,
             effect: 'fade',
         });
+        // @ts-ignore:
         new Swiper('.trending-products .swiper', {
             slidesPerView: 5,
             spaceBetween: 16

@@ -78,7 +78,69 @@ class PassVisibility {
         document.querySelectorAll("button.password-visibility").forEach(element => new PassVisibility(<HTMLButtonElement>element));
     }
 }
+class Switch {
+    switchBtn: HTMLAnchorElement;
+    switchTarget: HTMLFormElement | null;
+    constructor(Element: HTMLAnchorElement) {
+        this.switchBtn = Element;
+        this.switchTarget = document.querySelector(Element.getAttribute("href")!);
+        this.events();
+    }
+    private events() {
+        this.switchBtn.addEventListener("click", this.clickHandler.bind(this));
+    }
+    private clickHandler() {
+        const activeForm: JQuery<HTMLFormElement> = jQuery('.form-active');
+        activeForm.addClass('processing').block({
+            message: "",
+            overlayCSS: {
+                background: '#fff',
+                opacity: 0.6
+            }
+        });
+        setTimeout(this.timeoutHandler.bind(this, activeForm), 3000);
+    }
+    private timeoutHandler(activeForm: JQuery<HTMLFormElement>) {
+        activeForm.removeClass('form-active processing').unblock();
+        this.switchTarget?.classList.add("form-active");
+    }
+    public static initSwitch() {
+        switch (window.location.hash) {
+            case "#woocommerce-form-register":
+                const doesFormExist = document.querySelector("#woocommerce-form-register");
+                if (doesFormExist) {
+                    doesFormExist.classList.add("form-active");
+                } else {
+                    document.querySelector("#woocommerce-form-login")!.classList.add("form-active");
+                }
+                break;
+            case "#woocommerce-form-reset-password":
+                document.querySelector("#woocommerce-form-reset-password")!.classList.add("form-active");
+                break;
+            default:
+                document.querySelector("#woocommerce-form-login")?.classList.add("form-active");
+                break;
+        }
+        document.querySelectorAll(".switch-form").forEach((Element) => {
+            new Switch(<HTMLAnchorElement>Element);
+        });
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     PassVisibility.init_pass_visibility();
     new LayoutPopup();
+    Switch.initSwitch();
+    if (document.body.classList.contains('home')) {
+        // @ts-ignore:
+        new Swiper('.hero .swiper', {
+            slidesPerView: 1,
+            loop: true,
+            effect: 'fade',
+        });
+        // @ts-ignore:
+        new Swiper('.trending-products .swiper', {
+            slidesPerView: 5,
+            spaceBetween: 16
+        });
+    }
 });

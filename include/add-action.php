@@ -32,4 +32,8 @@ add_action('wp_logout', 'fanpet_redirect_after_logout');
 // This theme doesn't have a traditional sidebar.
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 // remove woocomerce breadcrumb
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+// add reset password form in the login page
+add_action('fanpet_woocommerce_reset_password', function () {
+    wc_get_template('myaccount/form-lost-password.php');
+});

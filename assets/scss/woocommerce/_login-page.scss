@@ -1,0 +1,11 @@
+.woocommerce-account {
+    #woocommerce-form-login,
+    #woocommerce-form-register,
+    #woocommerce-form-reset-password {
+        display: none;
+
+        &.form-active {
+            display: block;
+        }
+    }
+}
