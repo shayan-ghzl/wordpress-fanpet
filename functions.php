@@ -6,6 +6,8 @@ include_once('include/add-filter.php');
 include_once('include/customizer-api.php');
 include_once('include/comments-helper.php');
 // -----------------------------------------------
+include_once('include/admin-menu.php');
+// -----------------------------------------------
 if (! function_exists('fanpet_get_theme_mod')) {
 	function fanpet_get_theme_mod($name, $default = false)
 	{
