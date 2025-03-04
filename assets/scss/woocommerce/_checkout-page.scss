@@ -1,9 +1,49 @@
+@use "../wordpress-basics/environments" as env;
+@use "../wordpress-basics/mixin";
+
 form.woocommerce-checkout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
-    gap: 24px;
+    gap: 36px;
+    --input-font-size: 14px;
 
     #order_review_heading {
         display: none;
+    }
+
+    .woocommerce-billing-fields__field-wrapper {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 16px;
+    }
+    .woocommerce-checkout-review-order {
+        --paragraph-font-size: 14px;
+    }
+    #billing_address_2_field {
+        margin-top: 24px;
+    }
+    .shop_table {
+        font-size: 14px;
+        width: 100%;
+        background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+        border: 1px solid #aaa;
+        margin-bottom: 36px;
+
+        th, td {
+            padding: 6px 4px;
+            border-bottom: 1px solid #ccc;
+        }
+        tfoot {
+            tr:last-child {
+                th, td {
+                    border-width: 0;
+                }
+            }
+        }
+    }
+    #place_order {
+        display: block;
+        width: 100%;
+        --button-padding: 16px;
     }
 }

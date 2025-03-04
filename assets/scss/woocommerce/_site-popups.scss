@@ -34,7 +34,6 @@ $basket-item-border-bottom-color: #636363 !default;
             &::-webkit-scrollbar-thumb {
                 background: var(--sb-thumb-color);
                 border-radius: 3px;
-
             }
         }
         .mini_cart_item {
@@ -65,10 +64,14 @@ $basket-item-border-bottom-color: #636363 !default;
                 position: absolute;
                 top: 6px;
                 left: 8px;
-                font-size: 18px;
-                --link-padding: 4px;
-                --link-color: #d9d9d9;
-                --link-hover-color: #fff;
+                --link-padding: 0px 3px;
+
+                svg {
+                    width: 18px;
+                }
+                path {
+                    fill: #d9d9d9;
+                }
             }
             .attachment-woocommerce_thumbnail {
                 width: 52px;
