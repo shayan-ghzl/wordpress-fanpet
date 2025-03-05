@@ -893,7 +893,7 @@ ul.products {
   --icon-display: inline-block;
   --icon-font-size: 18px;
 }
-.site-popups .user-popup .button-accent {
+.site-popups .user-popup .button {
   --button-color: #000;
   --button-hover-color: #000;
   --button-active-color: #000;
@@ -1220,6 +1220,10 @@ form.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 16px;
+}
+form.woocommerce-checkout .woocommerce-NoticeGroup {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 form.woocommerce-checkout .woocommerce-checkout-review-order {
   --paragraph-font-size: 14px;
