@@ -2,7 +2,7 @@
 
 footer.site-footer {
     padding: 32px 0 14px 0;
-    background-color: env.$primary-color;
+    background-color: var(--header-footer-color);
     --link-display: block;
     --link-color: #fff;
     --link-hover-color: #{env.$accent-color};

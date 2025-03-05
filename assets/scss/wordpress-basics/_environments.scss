@@ -10,15 +10,3 @@ $danger-color: #dc3545 !default;
 $layout-max-width: 1340px !default;
 $tablet-width: 768px !default;
 $mobile-width: 576px !default;
-
-$button-colors: (
-    "primary": $primary-color,
-    "accent": $accent-color,
-    "danger": $danger-color,
-) !default;
-
-$input-colors: (
-    "primary": $primary-color,
-    "accent": $accent-color,
-    "danger": $danger-color,
-) !default;

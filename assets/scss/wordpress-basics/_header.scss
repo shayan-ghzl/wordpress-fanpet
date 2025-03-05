@@ -12,7 +12,7 @@ header.site-header {
         padding: 16px 0;
     }
     nav {
-        background-color: env.$primary-color;
+        background-color: var(--header-footer-color);
 
         // list
         --list-font-size: 14px;

@@ -1,6 +1,4 @@
-@use 'sass:color';
 @use "environments" as env;
-@use "mixin";
 
 $text-color: #000 !default;
 $text-align: right !default;
@@ -48,23 +46,11 @@ $button-font-size: 14px !default;
 $button-font-weight: 500 !default;
 $button-line-height: 1 !default;
 $button-text-align: center !default;
-$button-color: #fff !default;
-$button-background-color: env.$primary-color !default;
 $button-border-width: 0 !default;
 $button-border-color: transparent !default;
 $button-border-radius: 8px !default;
 $button-padding: 10px 16px !default;
 $button-margin: 0 !default;
-// focus
-$button-focus-box-shadow-rgb: mixin.to-rgb($button-background-color) !default;
-// hover
-$button-hover-color: #fff !default;
-$button-hover-background-color: color.adjust($button-background-color, $lightness: -10%) !default;
-$button-hover-border-color: transparent !default;
-// active
-$button-active-color: #fff !default;
-$button-active-background-color: color.adjust($button-background-color, $lightness: -10%) !default;
-$button-active-border-color: transparent !default;
 // ----------------input----------------
 $input-display: block !default;
 $input-font-family: "Vazir", Vazir !default;
@@ -72,17 +58,10 @@ $input-font-size: 16px !default;
 $input-font-weight: 400 !default;
 $input-line-height: 1.5 !default;
 $input-text-align: rtl !default;
-$input-color: #000 !default;
-$input-background-color: #fff !default;
 $input-border-width: 1px !default;
-$input-border-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.5) !default;
 $input-border-radius: 6px !default;
 $input-width: 100% !default;
 $input-padding: 8px !default;
 $input-margin: 0 !default;
 $input-autofill-color: #000 !default;
-$input-disabled-autofill-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.5) !default;
-// focus
-$input-focus-color: #000 !default;
-$input-focus-border-color: env.$primary-color !default;
-$input-focus-box-shadow-rgb: mixin.to-rgb($input-focus-border-color) !default;
+$input-disabled-autofill-color: #00000080 !default;

@@ -182,3 +182,60 @@ $wp_customize->add_control('email_address_control', array(
     'settings' => 'email_address_setting',
     'type'     => 'email',
 ));
+/*
+* Colors
+*/
+$wp_customize->add_section('color_palete_sub_panel', array(
+    'title' => __('Colors', 'fanpet'),
+    'panel'    => 'fanpet_panel',
+    'priority' => 120,
+));
+// ------------------------------
+$wp_customize->add_setting('header_footer_color_setting', array(
+    'default'     => '#613abc',
+    'capability'     => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+));
+$wp_customize->add_control(new WP_Customize_Color_Control(
+    $wp_customize,
+    'header_footer_color_control',
+    array(
+        'label' => __('Header and Footer Color', 'fanpet'),
+        'section'    => 'color_palete_sub_panel',
+        'settings'   => 'header_footer_color_setting',
+    )
+));
+$components_colors = [
+    // Button Colors
+    'button_color' => ['#fff', __('Button Text Color', 'fanpet')],
+    'button_hover_color' => ['#fff', __('Button Text Hover Color', 'fanpet')],
+    'button_active_color' => ['#fff', __('Button Text Active Color', 'fanpet')],
+    'button_bg_color' => ['#613abc', __('Button Background Color', 'fanpet')],
+    'button_hover_bg_color' => ['#4d2e95', __('Button Hover Background Color', 'fanpet')],
+    'button_active_bg_color' => ['#4d2e95', __('Button Active Background Color', 'fanpet')],
+    'button_border_color' => ['#000', __('Button Border Color', 'fanpet')],
+    'button_hover_border_color' => ['#000', __('Button Hover Border Color', 'fanpet')],
+    'button_active_border_color' => ['#000', __('Button Active Border Color', 'fanpet')],
+    // Input Colors
+    'input_color' => ['#2c2c2c', __('Input Text Color', 'fanpet')],
+    'input_background_color' => ['#fff', __('Input Background Color', 'fanpet')],
+    'input_border_color' => ['#613abc', __('Input Border Color', 'fanpet')],
+    'input_focus_border_color' => ['#613abc', __('Input Focus Border Color', 'fanpet')],
+];
+foreach ($components_colors as $key => $value) {
+    $wp_customize->add_setting("{$key}_setting", [
+        'default' => $value[0],
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+        $wp_customize,
+        "{$key}_control",
+        [
+            'label' => $value[1],
+            'section' => 'color_palete_sub_panel',
+            'settings' => "{$key}_setting",
+        ]
+    ));
+}
