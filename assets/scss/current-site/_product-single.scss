@@ -1,5 +1,4 @@
 @use "../wordpress-basics/environments" as env;
-@use "../wordpress-basics/mixin";
 
 .single-product {
     .product.type-product {
@@ -163,8 +162,8 @@
                 border-radius: 8px 8px 0 0;
 
                 &.active {
-                    border-color: env.$primary-color env.$primary-color #fff env.$primary-color;
-                    background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+                    border-color: var(--primary-color) var(--primary-color) #fff var(--primary-color);
+                    background-color: #{rgba}(var(--primary-rgb-color), 0.1);
                 }
             }
         }

@@ -5,10 +5,10 @@
     --list-font-size: 14px;
 
     article {
-        background-color: rgba(env.$primary-color, 0.05);
+        background-color: rgba(var(--primary-rgb-color), 0.05);
         border-width: 1px 3px 1px 1px;
         border-style: solid;
-        border-color: env.$primary-color;
+        border-color: var(--primary-color);
         border-radius: 6px;
         margin-bottom: 12px;
         padding: 10px;
@@ -18,7 +18,7 @@
         align-items: center;
         gap: 16px;
         padding-bottom: 10px;
-        border-bottom: 1px solid env.$primary-color;
+        border-bottom: 1px solid var(--primary-color);
 
         .avatar {
             display: block;

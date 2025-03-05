@@ -205,6 +205,29 @@ $wp_customize->add_control(new WP_Customize_Color_Control(
         'settings'   => 'header_footer_color_setting',
     )
 ));
+$wp_customize->add_setting('primary_color_setting', array(
+    'default'     => '#613abc',
+    'capability'     => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+));
+$wp_customize->add_control(new WP_Customize_Color_Control(
+    $wp_customize,
+    'primary_color_control',
+    array(
+        'label' => __('Primary Color', 'fanpet'),
+        'section'    => 'color_palete_sub_panel',
+        'settings'   => 'primary_color_setting',
+    )
+));
+/*
+* Components Colors
+*/
+$wp_customize->add_section('components_color_palete_sub_panel', array(
+    'title' => __('Components Colors', 'fanpet'),
+    'panel'    => 'fanpet_panel',
+    'priority' => 120,
+));
+// ------------------------------
 $components_colors = [
     // Button Colors
     'button_color' => ['#fff', __('Button Text Color', 'fanpet')],
@@ -234,7 +257,7 @@ foreach ($components_colors as $key => $value) {
         "{$key}_control",
         [
             'label' => $value[1],
-            'section' => 'color_palete_sub_panel',
+            'section' => 'components_color_palete_sub_panel',
             'settings' => "{$key}_setting",
         ]
     ));

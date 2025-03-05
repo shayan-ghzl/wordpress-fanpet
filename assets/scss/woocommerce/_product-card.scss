@@ -13,8 +13,8 @@ li.product {
     border-radius: $border-radius;
     padding: $padding;
     --link-display: block;
-    --link-color: #{env.$primary-color};
-    --link-hover-color: #{env.$primary-color};
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--primary-color);
     --button-display: block;
     --button-margin: 18px 0 0 0;
     --heading-2-font-size: 16px;

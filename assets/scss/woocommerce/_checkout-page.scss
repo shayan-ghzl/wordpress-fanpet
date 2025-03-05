@@ -1,5 +1,4 @@
 @use "../wordpress-basics/environments" as env;
-@use "../wordpress-basics/mixin";
 
 form.woocommerce-checkout {
     display: grid;
@@ -25,7 +24,7 @@ form.woocommerce-checkout {
     .shop_table {
         font-size: 14px;
         width: 100%;
-        background-color: #{rgba}(mixin.to-rgb(env.$primary-color), 0.1);
+        background-color: #{rgba}(var(--primary-rgb-color), 0.1);
         border: 1px solid #aaa;
         margin-bottom: 36px;
 

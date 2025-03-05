@@ -1,5 +1,6 @@
 <?php
 $header_footer_color_setting = sanitize_hex_color(fanpet_get_theme_mod('header_footer_color_setting', '#000'));
+$primary_color_setting = sanitize_hex_color(fanpet_get_theme_mod('primary_color_setting', '#000'));
 
 $button_color_setting = sanitize_hex_color(fanpet_get_theme_mod('button_color_setting', '#000'));
 $button_hover_color_setting = sanitize_hex_color(fanpet_get_theme_mod('button_hover_color_setting', '#000'));
@@ -34,6 +35,7 @@ function hex_to_rgb($hex)
 }
 
 $header_footer_rgb_color_setting = hex_to_rgb($header_footer_color_setting);
+$primary_rgb_color_setting = hex_to_rgb($primary_color_setting);
 
 $button_rgb_color_setting = hex_to_rgb($button_color_setting);
 $button_hover_rgb_color_setting = hex_to_rgb($button_hover_color_setting);
@@ -54,6 +56,8 @@ return "
     :root {
         --header-footer-color: {$header_footer_color_setting};
         --header-footer-rgb-color: {$header_footer_rgb_color_setting};
+        --primary-color: {$primary_color_setting};
+        --primary-rgb-color: {$primary_rgb_color_setting};
 
         --button-color: {$button_color_setting};
         --button-hover-color: {$button_hover_color_setting};
