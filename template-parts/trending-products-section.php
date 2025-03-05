@@ -1,11 +1,17 @@
 <?php
 $menu_name = $args['menu_name'];
-$title = $args['title'];
+$title = 'محصولات';
 
 $locations = get_nav_menu_locations();
 
 if (isset($locations[$menu_name])) {
     $menu_id = $locations[$menu_name];
+
+    $menu_object = wp_get_nav_menu_object($menu_id);
+    if ($menu_object) {
+        $title = $menu_object->name;
+    }
+
     $menu_items = wp_get_nav_menu_items($menu_id);
     $product_ids = [];
 
@@ -32,7 +38,7 @@ if (isset($locations[$menu_name])) {
             echo '
                 <section class="trending-products">
                     <header class="section-title">
-                        <h1>' . $title . '</h1>
+                        <h1>' . esc_html($title) . '</h1>
                     </header>
                     <div class="swiper">
                         <div class="swiper-wrapper">

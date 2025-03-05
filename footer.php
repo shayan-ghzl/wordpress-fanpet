@@ -18,11 +18,29 @@
                             
                             <p><?php bloginfo('description'); ?></p>
 
-                            <a href="mailto:shayan97.tti@gmail.com">ایمیل: shayan97.tti@gmail.com</a>
-                            <a href="tel:09353728642">تلفن: 09353728642</a>
+                            <?php
+                                $phone_number = fanpet_get_theme_mod('phone_number_setting', '');
+                                $email_address = fanpet_get_theme_mod('email_address_setting', '');
+
+                                if (!empty($email_address)) {
+                                    echo '<a href="mailto:' . esc_attr($email_address) . '">ایمیل: ' . esc_html($email_address) . '</a>';
+                                }
+
+                                if (!empty($phone_number)) {
+                                    echo '<a href="tel:' . esc_attr($phone_number) . '">تلفن: ' . esc_html($phone_number) . '</a>';
+                                }
+                            ?>
                         </div>
 
-                        <p class="designer">طراحی و اجرا توسط <a href="#" target="_blank">لیان وب</a></p>
+                        <?php
+                        $show_designer_info = (int) fanpet_get_theme_mod('show_designer_info_setting', 1);
+                        if ($show_designer_info) {
+                        ?>
+                            <p class="designer">طراحی و اجرا توسط <a href="https://shayan-ghzl.github.io/" target="_blank">لیان وب</a></p>
+                        <?php  
+                        }
+                        ?>
+                        
                     </div>
                 </footer>
             </main>
